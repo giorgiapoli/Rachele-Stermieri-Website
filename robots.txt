@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rachelestermiericonsulente.it/sitemap.xml
