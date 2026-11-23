@@ -355,3 +355,26 @@ tbody tr:last-child td{border-bottom:0}
   .scheda-strumento{padding:32px 24px}
   .passi li{padding:18px 20px;font-size:16px}
 }
+
+/* =========================================================
+   Versione semplificata
+   ========================================================= */
+.sezione{padding:96px 0}
+.apertura{padding:56px 0 96px}
+.piede-griglia{grid-template-columns:1.6fr 1fr 1.2fr}
+.piede .contenitore{padding-top:72px}
+.elenco-servizi{list-style:none;margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);column-gap:40px;border-top:1px solid var(--sabbia)}
+.elenco-servizi a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;border-bottom:1px solid var(--sabbia);font-family:var(--serif);font-size:24px;color:var(--blu);transition:color .25s,padding .3s}
+.elenco-servizi a svg{width:14px;height:14px;flex:none;color:var(--sabbia-scura);transition:transform .3s,color .3s}
+.elenco-servizi a:hover{color:var(--salvia-scura);padding-left:6px}
+.elenco-servizi a:hover svg{transform:translateX(4px);color:var(--blu)}
+.fascia-blu{padding:104px 0}
+.fasi-breve{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:36px;counter-reset:f}
+.fasi-breve li{counter-increment:f;border:1px solid rgba(248,244,237,.25);border-radius:999px;padding:8px 18px;font-size:14px;color:rgba(248,244,237,.85)}
+.fasi-breve li::before{content:counter(f) ". ";color:var(--sabbia)}
+.fascia-blu .azioni{margin-top:32px}
+.fascia-blu .azioni .collegamento{margin-top:0}
+.aiuto-blocco .azioni{margin-top:32px}
+@media (max-width:1060px){.elenco-servizi{grid-template-columns:1fr 1fr}.piede-griglia{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.sezione{padding:72px 0}.fascia-blu{padding:80px 0}.elenco-servizi{grid-template-columns:1fr}.elenco-servizi a{font-size:22px;padding:18px 0}.fascia-blu .azioni .btn,.aiuto-blocco .azioni .btn{width:100%}}
+.piede{background:#17233A}

@@ -239,7 +239,6 @@ function piede(b) {
         <p class="motto">I tuoi progetti meritano un piano.</p>
       </div>
       <div><h4>Sito</h4><ul><li><a href="${b}chi-sono/">Chi sono</a></li><li><a href="${b}metodo/">Il mio metodo</a></li><li><a href="${b}servizi/">Servizi</a></li><li><a href="${b}approfondimenti/">Approfondimenti</a></li><li><a href="${b}contatti/">Contatti</a></li></ul></div>
-      <div><h4>Servizi</h4><ul>${SERVIZI.slice(0, 5).map(s => `<li><a href="${b}servizi/${s.slug}/">${s.nome}</a></li>`).join('')}<li><a href="${b}servizi/">Tutti i servizi</a></li></ul></div>
       <div><h4>Contatti</h4><ul><li><a href="tel:${TELEFONO_LINK}">${TELEFONO}</a></li><li><a href="#" data-whatsapp>Scrivimi su WhatsApp</a></li><li>[email da inserire]</li><li>In presenza e online</li></ul></div>
     </div>
     <div class="normativa">
@@ -366,68 +365,40 @@ generate.push(pagina({
     <div>
       <p class="occhiello compare">Consulente finanziaria</p>
       <h1 class="compare d1">I tuoi progetti <em>meritano un piano.</em></h1>
-      <p class="intro compare d2">Ti accompagno nelle scelte che riguardano il tuo denaro: dal risparmio di ogni giorno ai progetti più importanti della tua vita. Con ascolto, chiarezza e una visione di lungo periodo.</p>
+      <p class="intro compare d2">Ti accompagno nelle scelte che riguardano il tuo denaro, con ascolto, chiarezza e una visione di lungo periodo. In presenza oppure online.</p>
       <div class="azioni compare d3">
         <a href="${b}contatti/" class="btn btn-pieno">Inizia a pianificare il tuo futuro</a>
-        <a href="${b}metodo/" class="collegamento">Scopri il mio metodo <span aria-hidden="true">→</span></a>
+        <a href="${b}chi-sono/" class="collegamento">Chi sono <span aria-hidden="true">→</span></a>
       </div>
-      <p class="nota-online compare d3"><i aria-hidden="true"></i>Incontri in presenza oppure online, ovunque tu sia.</p>
     </div>
     <figure class="ritratto compare d2">
       <span class="alone" aria-hidden="true"></span><span class="anello" aria-hidden="true"></span>
       <img src="${b}img/rachele-tonda.jpg" alt="Ritratto di Rachele Stermieri" width="900" height="900" fetchpriority="high">
-      <figcaption><em aria-hidden="true">RS</em><div><b>Rachele Stermieri</b><span>Consulente finanziaria</span></div></figcaption>
     </figure>
-  </div>
-</section>
-
-<section class="fascia-blu">
-  <div class="contenitore">
-    <blockquote class="compare">Prima di parlare di numeri, <em>ascolto le persone.</em></blockquote>
-    <div class="compare d1">
-      <p>Ogni persona ha una storia, delle esigenze e dei desideri diversi. Per questo il nostro primo incontro è dedicato a conoscerti: cosa desideri, cosa ti preoccupa, dove vuoi arrivare.</p>
-      <a href="${b}chi-sono/" class="collegamento">Conosciamoci <span aria-hidden="true">→</span></a>
-    </div>
   </div>
 </section>
 
 <section class="sezione sezione-crema">
   <div class="contenitore">
-    <div class="testa-sezione">
-      <div class="compare"><p class="occhiello">Servizi</p><h2>Di cosa possiamo <em>parlare insieme.</em></h2><p class="intro">Per giovani e giovani coppie, famiglie, professionisti, imprenditori e patrimoni importanti. Ogni servizio parte dalle domande che ti fai davvero.</p></div>
-    </div>
-    ${grigliaServizi(b)}
+    <div class="compare"><p class="occhiello">Servizi</p><h2>Di cosa possiamo <em>parlare insieme.</em></h2></div>
+    <ul class="elenco-servizi compare d1">
+      ${SERVIZI.map(s => `<li><a href="${b}servizi/${s.slug}/"><span>${s.nome}</span>${freccia}</a></li>`).join('\n      ')}
+    </ul>
   </div>
 </section>
 
-<section class="sezione metodo-blocco">
+<section class="fascia-blu">
   <div class="contenitore">
-    <div class="fisso compare">
-      <p class="occhiello">Il mio metodo</p>
-      <h2>Un percorso <em>costruito intorno a te.</em></h2>
-      <p class="frase">${FRASE_METODO}</p>
-      <a href="${b}metodo/" class="collegamento">Scopri come lavoro <span aria-hidden="true">→</span></a>
+    <div class="compare">
+      <blockquote>Prima di parlare di numeri, <em>ascolto le persone.</em></blockquote>
+      <ol class="fasi-breve">${FASI.map(([t]) => `<li>${t}</li>`).join('')}</ol>
     </div>
-    <ol class="fasi">
-      ${FASI.map(([t, d]) => `<li class="compare"><div><h3>${t}</h3><p>${d}</p></div></li>`).join('\n      ')}
-    </ol>
-  </div>
-</section>
-
-<section class="sezione sezione-crema chi-blocco">
-  <div class="contenitore">
-    <figure class="arco compare"><img src="${b}img/rachele.jpg" alt="Rachele Stermieri" width="440" height="550" loading="lazy"></figure>
-    <div class="testo compare d1">
-      <p class="occhiello">Chi sono</p>
-      <h2>Piacere, <em>sono Rachele.</em></h2>
-      <p>Credo che dietro ogni progetto finanziario ci siano prima di tutto una persona, una storia e degli obiettivi da realizzare. Il mio lavoro è aiutarti a dare forma a quegli obiettivi, con un percorso chiaro e pensato su di te.</p>
-      <ul class="formazione">${FORMAZIONE.map(f => `<li>${f}</li>`).join('')}</ul>
-      <a href="${b}chi-sono/" class="collegamento">Conosciamoci meglio <span aria-hidden="true">→</span></a>
+    <div class="compare d1">
+      <p>${FRASE_METODO.replace(/[«»]/g, '')}</p>
+      <div class="azioni"><a href="${b}contatti/" class="btn btn-chiaro">Inizia a pianificare il tuo futuro</a><a href="${b}metodo/" class="collegamento">Il mio metodo <span aria-hidden="true">→</span></a></div>
     </div>
   </div>
-</section>
-
-${chiusura(b).replace(' sezione-crema', '')}`,
+</section>`,
 }));
 
 /* ------------------------------------------------------------------ */
@@ -436,7 +407,7 @@ ${chiusura(b).replace(' sezione-crema', '')}`,
 generate.push(pagina({
   percorso: 'chi-sono/', attiva: 'chi-sono',
   titolo: 'Chi sono · Rachele Stermieri, consulente finanziaria',
-  descrizione: 'Rachele Stermieri, consulente finanziaria: prima di parlare di numeri, ascolto le persone. Il mio approccio, la mia formazione e il valore della relazione.',
+  descrizione: 'Rachele Stermieri, consulente finanziaria: prima di parlare di numeri, ascolto le persone. Il mio approccio e la mia formazione.',
   corpo: b => `
 ${testaPagina(b, { briciole: [['Chi sono']], occhiello: 'Chi sono', titolo: 'Prima di parlare di numeri, <em>ascolto le persone.</em>', intro: 'Sono Rachele Stermieri, consulente finanziaria. Accompagno persone, famiglie e imprenditori nelle scelte che riguardano il loro denaro e i loro progetti.' })}
 
@@ -444,36 +415,13 @@ ${testaPagina(b, { briciole: [['Chi sono']], occhiello: 'Chi sono', titolo: 'Pri
   <div class="contenitore">
     <figure class="arco compare"><img src="${b}img/rachele.jpg" alt="Rachele Stermieri" width="440" height="550"></figure>
     <div class="testo compare d1">
-      <p class="occhiello">Il mio approccio</p>
       <h2>Il mio lavoro parte <em>dalle persone, non dai prodotti.</em></h2>
-      <p>Credo che ogni persona abbia una storia, delle esigenze, degli obiettivi e dei desideri diversi. Per questo il nostro primo incontro è dedicato all'ascolto e alla comprensione della tua situazione.</p>
-      <p>Solo dopo averti conosciuto possiamo costruire insieme un percorso coerente con ciò che desideri, con le tue possibilità e con i tuoi tempi.</p>
+      <p>Ogni persona ha una storia, delle esigenze e dei desideri diversi. Per questo il primo incontro è dedicato ad ascoltarti. Poi costruiamo insieme un percorso coerente con ciò che desideri, e lo seguiamo nel tempo.</p>
+      <ul class="formazione">${FORMAZIONE.map(f => `<li>${f}</li>`).join('')}</ul>
+      <div class="azioni" style="margin-top:0"><a href="${b}contatti/" class="btn btn-pieno">Conosciamoci</a><a href="${b}metodo/" class="collegamento">Il mio metodo <span aria-hidden="true">→</span></a></div>
     </div>
   </div>
-</section>
-
-<section class="fascia-blu">
-  <div class="contenitore">
-    <blockquote class="compare">Dietro ogni progetto finanziario ci sono <em>una persona, una storia e degli obiettivi.</em></blockquote>
-    <div class="compare d1">
-      <p>Per me la consulenza è una relazione che dura nel tempo, fatta di dialogo, chiarezza e verifiche periodiche. L'obiettivo è che tu possa prendere ogni decisione con consapevolezza e serenità.</p>
-      <a href="${b}metodo/" class="collegamento">Scopri il mio metodo <span aria-hidden="true">→</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="sezione aiuto-blocco">
-  <div class="contenitore">
-    <div class="testo compare">
-      <p class="occhiello">Formazione</p>
-      <h2>Il mio <em>percorso.</em></h2>
-      <p>Una formazione in ambito economico e manageriale, completata da una preparazione professionale specifica nel mondo della finanza.</p>
-    </div>
-    <ul class="passi compare d1">${FORMAZIONE.map((f, i) => `<li><span>${['i', 'ii', 'iii'][i]}</span>${f}</li>`).join('')}</ul>
-  </div>
-</section>
-
-${chiusura(b, 'Conosciamoci, <em>senza fretta.</em>', 'Raccontami chi sei e cosa desideri. Il primo passo è una conversazione.')}`,
+</section>`,
 }));
 
 /* ------------------------------------------------------------------ */
@@ -504,9 +452,7 @@ ${testaPagina(b, { briciole: [['Il mio metodo']], occhiello: 'Il mio metodo', ti
       ${FASI_DETTAGLIO.map(([t, d, e]) => `<li class="compare"><div><h3>${t}</h3><p><strong style="font-weight:500;color:var(--blu)">${d}</strong></p><p>${e}</p></div></li>`).join('\n      ')}
     </ol>
   </div>
-</section>
-
-${chiusura(b)}`,
+</section>`,
 }));
 
 /* ------------------------------------------------------------------ */
@@ -523,9 +469,7 @@ ${testaPagina(b, { briciole: [['Servizi']], occhiello: 'Servizi', titolo: 'Di co
   <div class="contenitore">
     ${grigliaServizi(b)}
   </div>
-</section>
-
-${chiusura(b, 'Non sai da dove <em>cominciare?</em>', 'Va benissimo così. Partiamo da una conversazione e capiamo insieme cosa ti serve.')}`,
+</section>`,
 }));
 
 /* ------------------------------------------------------------------ */
@@ -598,13 +542,11 @@ ${s.calcolatore ? CALCOLATORE : ''}
       <p class="occhiello">Come posso aiutarti</p>
       <h2>Un aiuto <em>concreto.</em></h2>
       <p>${s.aiuto}</p>
-      <p><a href="${b}metodo/" class="collegamento">Scopri come lavoro <span aria-hidden="true">→</span></a></p>
+      <div class="azioni"><a href="${b}contatti/" class="btn btn-pieno">Parliamone insieme</a><a href="#" data-whatsapp class="collegamento">Scrivimi su WhatsApp <span aria-hidden="true">→</span></a></div>
     </div>
     <ol class="passi compare d1">${s.passi.map((p, k) => `<li><span>${k + 1}</span>${p}</li>`).join('')}</ol>
   </div>
-</section>
-
-${chiusura(b, 'Parliamone <em>insieme.</em>', 'Raccontami la tua situazione: troveremo insieme la strada più adatta a te.').replace(' sezione-crema', '')}`,
+</section>`,
   }));
 });
 
@@ -631,9 +573,7 @@ ${testaPagina(b, { briciole: [['Approfondimenti']], occhiello: 'Approfondimenti'
     </a>
     <div class="in-arrivo compare"><b>Nuovi approfondimenti in arrivo</b>Presto qui troverai brevi articoli su risparmio, previdenza e pianificazione.</div>
   </div>
-</section>
-
-${chiusura(b)}`,
+</section>`,
 }));
 
 /* ------------------------------------------------------------------ */
