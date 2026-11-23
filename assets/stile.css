@@ -378,3 +378,16 @@ tbody tr:last-child td{border-bottom:0}
 @media (max-width:1060px){.elenco-servizi{grid-template-columns:1fr 1fr}.piede-griglia{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.sezione{padding:72px 0}.fascia-blu{padding:80px 0}.elenco-servizi{grid-template-columns:1fr}.elenco-servizi a{font-size:22px;padding:18px 0}.fascia-blu .azioni .btn,.aiuto-blocco .azioni .btn{width:100%}}
 .piede{background:#17233A}
+
+/* Menu su telefono: la sfocatura della testata "intrappola" il menu fisso (iPhone), quindi su schermi piccoli la togliamo */
+@media (max-width:1060px){
+  .testata{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--avorio)}
+  .menu{top:84px;bottom:auto;height:calc(100vh - 84px);height:calc(100dvh - 84px)}
+}
+@media (max-width:640px){
+  .menu{top:72px;height:calc(100vh - 72px);height:calc(100dvh - 72px)}
+}
+@media (max-width:1060px){
+  .testata nav{position:absolute;width:0;height:0}
+  body.menu-aperto .wa{opacity:0;pointer-events:none}
+}
