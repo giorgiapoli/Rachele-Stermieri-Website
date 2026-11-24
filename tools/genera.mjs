@@ -271,7 +271,7 @@ function chiusura(b, titolo = 'I tuoi progetti <em>meritano un piano.</em>', tes
 </section>`;
 }
 
-function pagina({ percorso, titolo, descrizione, attiva = '', corpo, script = [], indicizza = true, stato = '' }) {
+function pagina({ percorso, titolo, descrizione, attiva = '', corpo, script = [], indicizza = true, stato = '', classe = '' }) {
   const prof = percorso === '' ? 0 : percorso.split('/').filter(Boolean).length;
   const b = '../'.repeat(prof) || './';
   const url = `${DOMINIO}/${percorso}`;
@@ -290,14 +290,14 @@ ${indicizza ? `<link rel="canonical" href="${url}">` : '<meta name="robots" cont
 <meta property="og:title" content="${titolo}">
 <meta property="og:description" content="${descrizione}">
 <meta property="og:url" content="${url}">
-<meta property="og:image" content="${DOMINIO}/img/rachele-tonda.jpg">
+<meta property="og:image" content="${DOMINIO}/img/rachele-intera.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%2300436C'/%3E%3Ctext x='16' y='21.5' font-size='14' text-anchor='middle' fill='%23F8FAFC' font-family='Georgia,serif' font-style='italic'%3ERS%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${b}assets/stile.css">${stato}
 </head>
-<body>
+<body${classe ? ` class="${classe}"` : ''}>
 <a class="salta" href="#contenuto">Vai al contenuto</a>
 
 ${testata(b, attiva)}
@@ -355,48 +355,45 @@ const generate = [];
 /* Home                                                                */
 /* ------------------------------------------------------------------ */
 generate.push(pagina({
-  percorso: '',
+  percorso: '', classe: 'home',
   titolo: 'Rachele Stermieri · Consulente finanziaria — I tuoi progetti meritano un piano',
   descrizione: 'Rachele Stermieri, consulente finanziaria. Risparmio, investimenti, previdenza, protezione, mutui e pianificazione patrimoniale: un percorso costruito intorno a te, in presenza e online.',
-  stato: `\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialService","name":"Rachele Stermieri · Consulente finanziaria","url":"${DOMINIO}/","telephone":"${TELEFONO}","image":"${DOMINIO}/img/rachele-tonda.jpg","areaServed":"IT","slogan":"I tuoi progetti meritano un piano."}</script>`,
+  stato: `\n<link rel="preload" as="image" href="img/rachele-intera.jpg">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialService","name":"Rachele Stermieri · Consulente finanziaria","url":"${DOMINIO}/","telephone":"${TELEFONO}","email":"rachele.stermieri@bancamediolanum.it","image":"${DOMINIO}/img/rachele-intera.jpg","areaServed":"IT","slogan":"I tuoi progetti meritano un piano."}</script>`,
   corpo: b => `
-<section class="apertura">
-  <div class="contenitore">
-    <div>
-      <p class="occhiello compare">Consulente finanziaria</p>
-      <h1 class="compare d1">I tuoi progetti <em>meritano un piano.</em></h1>
-      <p class="intro compare d2">Ti accompagno nelle scelte che riguardano il tuo denaro, con ascolto, chiarezza e una visione di lungo periodo. In presenza oppure online.</p>
-      <div class="azioni compare d3">
-        <a href="${b}contatti/" class="btn btn-pieno">Inizia a pianificare il tuo futuro</a>
-        <a href="${b}chi-sono/" class="collegamento">Chi sono <span aria-hidden="true">→</span></a>
-      </div>
+<section class="eroe">
+  <div class="eroe-foto" aria-hidden="true"><img src="${b}img/rachele-intera.jpg" alt="" width="800" height="1067" fetchpriority="high"></div>
+  <div class="eroe-velo" aria-hidden="true"></div>
+  <div class="contenitore eroe-testo">
+    <p class="occhiello entra"><span class="solo-largo">Rachele Stermieri · </span>Consulente finanziaria</p>
+    <h1 class="entra e1">I tuoi progetti<br><em>meritano un piano.</em></h1>
+    <p class="eroe-sotto entra e2">Prima di parlare di numeri, ascolto le persone.</p>
+    <div class="azioni entra e3">
+      <a href="${b}contatti/" class="btn btn-chiaro">Inizia a pianificare il tuo futuro</a>
+      <a href="#" data-whatsapp class="btn btn-vetro solo-largo">${icona}WhatsApp</a>
     </div>
-    <figure class="ritratto compare d2">
-      <span class="alone" aria-hidden="true"></span><span class="anello" aria-hidden="true"></span>
-      <img src="${b}img/rachele-tonda.jpg" alt="Ritratto di Rachele Stermieri" width="900" height="900" fetchpriority="high">
-    </figure>
+    <ul class="eroe-dati entra e4">
+      <li><b>9</b><span>Aree di consulenza</span></li>
+      <li><b>OCF</b><span>Albo n° 2853</span></li>
+      <li><b>Online</b><span>e di persona</span></li>
+    </ul>
   </div>
+  <a href="#servizi" class="scendi" aria-label="Scorri ai servizi"><span></span></a>
 </section>
 
-<section class="sezione sezione-crema">
+<section class="sezione servizi-home" id="servizi">
   <div class="contenitore">
-    <div class="compare"><p class="occhiello">Servizi</p><h2>Di cosa possiamo <em>parlare insieme.</em></h2></div>
-    <ul class="elenco-servizi compare d1">
-      ${SERVIZI.map(s => `<li><a href="${b}servizi/${s.slug}/"><span>${s.nome}</span>${freccia}</a></li>`).join('\n      ')}
+    <div class="testa-sezione compare"><h2>Di cosa possiamo <em>parlare.</em></h2><a href="${b}servizi/" class="collegamento">Tutti i servizi <span aria-hidden="true">→</span></a></div>
+    <ul class="pillole">
+      ${SERVIZI.map((s, i) => `<li class="compare" style="--i:${i}"><a href="${b}servizi/${s.slug}/">${s.nome}${freccia}</a></li>`).join('\n      ')}
     </ul>
   </div>
 </section>
 
-<section class="fascia-blu">
-  <div class="contenitore">
-    <div class="compare">
-      <blockquote>Prima di parlare di numeri, <em>ascolto le persone.</em></blockquote>
-      <ol class="fasi-breve">${FASI.map(([t]) => `<li>${t}</li>`).join('')}</ol>
-    </div>
-    <div class="compare d1">
-      <p>${FRASE_METODO.replace(/[«»]/g, '')}</p>
-      <div class="azioni"><a href="${b}contatti/" class="btn btn-chiaro">Inizia a pianificare il tuo futuro</a><a href="${b}metodo/" class="collegamento">Il mio metodo <span aria-hidden="true">→</span></a></div>
-    </div>
+<section class="banda">
+  <div class="banda-foto" aria-hidden="true"><img src="${b}img/rachele.jpg" alt="" width="440" height="550" loading="lazy"></div>
+  <div class="contenitore banda-testo">
+    <blockquote class="compare">Non esiste un unico percorso. <em>Esiste il tuo.</em></blockquote>
+    <div class="azioni compare d1"><a href="${b}metodo/" class="btn btn-chiaro">Il mio metodo</a><a href="${b}chi-sono/" class="collegamento">Chi sono <span aria-hidden="true">→</span></a></div>
   </div>
 </section>`,
 }));
