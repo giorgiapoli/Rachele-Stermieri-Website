@@ -780,3 +780,9 @@ body.home.menu-aperto .apri-menu span{background:transparent}
 @media (max-width:900px){.eroe-foto{height:64%}.eroe-foto img{object-position:50% 12%}}
 .banda-foto img{object-position:50% 12%}
 @media (max-width:900px){.banda-foto img{object-position:50% 8%}}
+/* Foto della fascia finale più naturale */
+.banda::before{background:linear-gradient(90deg,var(--blu) 0%,var(--blu) 52%,rgba(0,67,108,.45) 66%,rgba(0,67,108,0) 88%)}
+.chi-blocco .arco img{object-position:50% 10%}
+@media (max-width:900px){.banda-foto{opacity:.45}}
+.banda-foto{-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 35%);mask-image:linear-gradient(90deg,transparent 0%,#000 35%)}
+@media (max-width:900px){.banda-foto{-webkit-mask-image:none;mask-image:none}}
