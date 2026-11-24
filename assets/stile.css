@@ -391,3 +391,104 @@ tbody tr:last-child td{border-bottom:0}
   .testata nav{position:absolute;width:0;height:0}
   body.menu-aperto .wa{opacity:0;pointer-events:none}
 }
+
+/* =========================================================
+   Versione compatta
+   ========================================================= */
+body{font-size:16px;line-height:1.65}
+h1{font-size:clamp(38px,5.4vw,70px)}
+h2{font-size:clamp(30px,3.5vw,46px)}
+.occhiello{margin-bottom:14px;font-size:11.5px}
+.intro{font-size:clamp(16px,1.3vw,17.5px);margin-top:16px}
+.azioni{margin-top:28px}
+.btn{padding:14px 26px;font-size:15px}
+.sezione{padding:72px 0}
+.apertura{padding:40px 0 72px}
+.apertura .contenitore{gap:56px}
+.ritratto{max-width:400px}
+.elenco-servizi{margin-top:28px}
+.elenco-servizi a{padding:16px 0;font-size:22px}
+.fascia-blu{padding:72px 0}
+.fascia-blu .contenitore{gap:56px}
+.fascia-blu blockquote{font-size:clamp(30px,3.8vw,50px)}
+.fasi-breve{margin-top:24px}
+.fascia-blu .azioni{margin-top:24px}
+.testa-pagina{padding:44px 0 56px}
+.testa-pagina h1{font-size:clamp(34px,4.4vw,58px)}
+.testa-pagina .contenitore{gap:48px}
+.briciole{margin-bottom:20px}
+.domande-griglia,.aiuto-blocco .contenitore,.metodo-blocco .contenitore,.chi-blocco .contenitore,.contatti-griglia{gap:64px}
+.domanda summary{padding:20px 0;font-size:clamp(19px,1.7vw,23px);gap:20px}
+.domanda summary .segno{width:36px;height:36px}
+.risposta{padding-bottom:24px}
+.risposta .aiuto{margin-top:14px;padding:16px 20px}
+.risposta .collegamento{margin-top:14px}
+.passi{gap:10px}
+.passi li{padding:16px 20px;font-size:16px}
+.passi li span{width:32px;height:32px;font-size:16px}
+.fasi li{padding:24px 0;grid-template-columns:70px 1fr}
+.fasi li::before{font-size:36px}
+.fasi h3{font-size:26px;margin-bottom:6px}
+.frase{margin:24px 0}
+.formazione{margin:24px 0 28px}
+.formazione li{padding:12px 0}
+.arco{max-width:380px}
+.calc-campi,.calc-risultati{padding:32px}
+.calc-campi{gap:16px}
+.calc-campo input{padding:12px 14px;font-size:17px}
+.modulo{padding:32px}
+.campo{margin-bottom:14px}
+.campo input,.campo textarea{padding:12px 14px}
+.campo textarea{min-height:120px}
+.recapiti{margin-top:24px}
+.recapiti li{padding:13px 0}
+.recapiti a,.recapiti span{font-size:21px}
+.scheda-strumento{padding:40px;gap:40px}
+.in-arrivo{margin-top:32px;padding:28px}
+.testo-legale h2{font-size:26px;margin:32px 0 8px}
+.piede .contenitore{padding-top:56px;padding-bottom:28px}
+.piede-griglia{padding-bottom:36px;gap:36px}
+.normativa{padding-top:24px}
+
+@media (max-width:1060px){
+  .menu a,.menu button.voce{font-size:21px;padding:14px 0}
+  .ritratto{max-width:320px}
+}
+@media (max-width:640px){
+  .sezione{padding:52px 0}
+  .apertura{padding:20px 0 52px}
+  .apertura .contenitore{gap:36px}
+  .ritratto{max-width:230px;margin:0 auto}
+  .ritratto .alone{inset:-14px -14px 14px 14px}
+  .azioni{margin-top:22px;gap:12px 20px}
+  .elenco-servizi a{font-size:19px;padding:12px 0}
+  .fascia-blu{padding:52px 0}
+  .fascia-blu .contenitore{gap:28px}
+  .fasi-breve li{padding:6px 14px;font-size:13px}
+  .testa-pagina{padding:20px 0 36px}
+  .testa-pagina .contenitore{gap:16px}
+  .domande-griglia,.aiuto-blocco .contenitore,.metodo-blocco .contenitore,.chi-blocco .contenitore,.contatti-griglia{gap:32px}
+  .domanda summary{padding:16px 0;font-size:19px}
+  .domanda summary .segno{width:32px;height:32px}
+  .fasi li{padding:18px 0;grid-template-columns:48px 1fr;gap:12px}
+  .fasi li::before{font-size:28px}
+  .fasi h3{font-size:22px}
+  .arco{max-width:280px;margin:0 auto}
+  .arco::after{inset:14px -14px -14px 14px}
+  .calc-campi,.calc-risultati{padding:22px 18px}
+  .cifra{padding:14px 16px}
+  .modulo{padding:22px 18px}
+  .piede .contenitore{padding-top:44px}
+  .piede-griglia{gap:24px;padding-bottom:28px}
+  .testata .contenitore{height:64px}
+  .menu{top:64px;height:calc(100vh - 64px);height:calc(100dvh - 64px)}
+  .marchio b{font-size:21px}
+  .marchio small{font-size:9.5px;margin-top:4px}
+  .apri-menu{width:42px;height:42px}
+}
+@media (max-width:640px){
+  .piede-griglia{grid-template-columns:1fr;gap:20px}
+  .piede-griglia > div:nth-child(2),.piede .motto{display:none}
+  .piede ul{gap:6px}
+  .piede h4{margin-bottom:10px}
+}
