@@ -47,6 +47,6 @@
     var box = document.getElementById('calendario');
     box.style.display = 'block';
     document.getElementById('calendario-contenuto').innerHTML =
-      '<iframe src="' + CALENDARIO + '" title="Prenota un incontro" style="width:100%;height:720px;border:1px solid #E2D8C8;border-radius:16px;background:#fff" loading="lazy"></iframe>';
+      '<iframe src="' + CALENDARIO + '" title="Prenota un incontro" style="width:100%;height:720px;border:1px solid #DDE6EF;border-radius:16px;background:#fff" loading="lazy"></iframe>';
   }
 })();

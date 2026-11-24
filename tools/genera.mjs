@@ -283,7 +283,7 @@ function pagina({ percorso, titolo, descrizione, attiva = '', corpo, script = []
 <title>${titolo}</title>
 <meta name="description" content="${descrizione}">
 ${indicizza ? `<link rel="canonical" href="${url}">` : '<meta name="robots" content="noindex">'}
-<meta name="theme-color" content="#F8F4ED">
+<meta name="theme-color" content="#F8FAFC">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta property="og:site_name" content="Rachele Stermieri · Consulente finanziaria">
@@ -291,7 +291,7 @@ ${indicizza ? `<link rel="canonical" href="${url}">` : '<meta name="robots" cont
 <meta property="og:description" content="${descrizione}">
 <meta property="og:url" content="${url}">
 <meta property="og:image" content="${DOMINIO}/img/rachele-tonda.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%231E2D42'/%3E%3Ctext x='16' y='21.5' font-size='14' text-anchor='middle' fill='%23F8F4ED' font-family='Georgia,serif' font-style='italic'%3ERS%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%2300436C'/%3E%3Ctext x='16' y='21.5' font-size='14' text-anchor='middle' fill='%23F8FAFC' font-family='Georgia,serif' font-style='italic'%3ERS%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -495,7 +495,7 @@ const CALCOLATORE = `
           <div class="cifra finale-c"><small>Capitale finale</small><b id="r-finale">—</b></div>
         </div>
         <div class="grafico-calc"><svg id="c-grafico" viewBox="0 0 640 280" role="img" aria-label="Grafico: capitale versato e interessi anno per anno"></svg>
-          <div class="legenda"><span><i style="background:#1E2D42"></i>Capitale versato</span><span><i style="background:#8C9C88"></i>Interessi</span></div>
+          <div class="legenda"><span><i style="background:#00436C"></i>Capitale versato</span><span><i style="background:#6CADDF"></i>Interessi</span></div>
         </div>
         <details class="tabella-anni">
           <summary>Tabella anno per anno</summary>
@@ -569,7 +569,7 @@ ${testaPagina(b, { briciole: [['Approfondimenti']], occhiello: 'Approfondimenti'
         <p>Simula un piano di accumulo con il tuo capitale iniziale, il versamento mensile, il rendimento e la durata che scegli tu.</p>
         <span class="btn btn-pieno" style="margin-top:28px">Prova il calcolatore</span>
       </div>
-      <svg viewBox="0 0 400 260" aria-hidden="true"><g stroke="#B9C4B5" stroke-dasharray="2 6"><line x1="0" x2="400" y1="65" y2="65"/><line x1="0" x2="400" y1="130" y2="130"/><line x1="0" x2="400" y1="195" y2="195"/></g><path d="M0 250 C120 240 220 205 300 150 S380 50 400 30 L400 260 L0 260Z" fill="#56695A" fill-opacity=".14"/><path d="M0 250 C120 240 220 205 300 150 S380 50 400 30" fill="none" stroke="#56695A" stroke-width="2.5"/><path d="M0 250 L400 135" fill="none" stroke="#1E2D42" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="5 5"/><circle cx="400" cy="30" r="6" fill="#1E2D42"/></svg>
+      <svg viewBox="0 0 400 260" aria-hidden="true"><g stroke="#B8CFE3" stroke-dasharray="2 6"><line x1="0" x2="400" y1="65" y2="65"/><line x1="0" x2="400" y1="130" y2="130"/><line x1="0" x2="400" y1="195" y2="195"/></g><path d="M0 250 C120 240 220 205 300 150 S380 50 400 30 L400 260 L0 260Z" fill="#34739F" fill-opacity=".14"/><path d="M0 250 C120 240 220 205 300 150 S380 50 400 30" fill="none" stroke="#34739F" stroke-width="2.5"/><path d="M0 250 L400 135" fill="none" stroke="#00436C" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="5 5"/><circle cx="400" cy="30" r="6" fill="#00436C"/></svg>
     </a>
     <div class="in-arrivo compare"><b>Nuovi approfondimenti in arrivo</b>Presto qui troverai brevi articoli su risparmio, previdenza e pianificazione.</div>
   </div>

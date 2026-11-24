@@ -54,17 +54,17 @@
     var out = '';
     for (var g = 0; g <= 4; g++) {
       var val = max * g / 4, yy = y(val);
-      out += '<line x1="' + sx + '" x2="' + (W - dx) + '" y1="' + yy + '" y2="' + yy + '" stroke="#E2D8C8"' + (g ? ' stroke-dasharray="2 5"' : '') + '/>';
-      out += '<text x="' + (sx - 10) + '" y="' + (yy + 4) + '" text-anchor="end" font-size="11" fill="#686B6E" font-family="Manrope,sans-serif">' + euroAsse(val) + '</text>';
+      out += '<line x1="' + sx + '" x2="' + (W - dx) + '" y1="' + yy + '" y2="' + yy + '" stroke="#DDE6EF"' + (g ? ' stroke-dasharray="2 5"' : '') + '/>';
+      out += '<text x="' + (sx - 10) + '" y="' + (yy + 4) + '" text-anchor="end" font-size="11" fill="#5B6878" font-family="Manrope,sans-serif">' + euroAsse(val) + '</text>';
     }
     var ogni = n > 30 ? 10 : n > 12 ? 5 : n > 6 ? 2 : 1;
     righe.forEach(function (r, k) {
       var x = sx + k * passo + (passo - larg) / 2;
       var hv = Math.max(0, (Math.min(r.versato, r.finale) / max) * h);
       var hi = Math.max(0, (r.interessi / max) * h);
-      out += '<rect x="' + x.toFixed(1) + '" y="' + (su + h - hv).toFixed(1) + '" width="' + larg.toFixed(1) + '" height="' + hv.toFixed(1) + '" fill="#1E2D42" rx="1.5"><title>Anno ' + r.anno + ': versato ' + euro.format(r.versato) + '</title></rect>';
-      if (hi > 0.3) out += '<rect x="' + x.toFixed(1) + '" y="' + (su + h - hv - hi).toFixed(1) + '" width="' + larg.toFixed(1) + '" height="' + hi.toFixed(1) + '" fill="#8C9C88" rx="1.5"><title>Anno ' + r.anno + ': interessi ' + euro.format(r.interessi) + '</title></rect>';
-      if (r.anno % ogni === 0 || r.anno === 1) out += '<text x="' + (x + larg / 2).toFixed(1) + '" y="' + (H - 10) + '" text-anchor="middle" font-size="11" fill="#686B6E" font-family="Manrope,sans-serif">' + r.anno + '</text>';
+      out += '<rect x="' + x.toFixed(1) + '" y="' + (su + h - hv).toFixed(1) + '" width="' + larg.toFixed(1) + '" height="' + hv.toFixed(1) + '" fill="#00436C" rx="1.5"><title>Anno ' + r.anno + ': versato ' + euro.format(r.versato) + '</title></rect>';
+      if (hi > 0.3) out += '<rect x="' + x.toFixed(1) + '" y="' + (su + h - hv - hi).toFixed(1) + '" width="' + larg.toFixed(1) + '" height="' + hi.toFixed(1) + '" fill="#6CADDF" rx="1.5"><title>Anno ' + r.anno + ': interessi ' + euro.format(r.interessi) + '</title></rect>';
+      if (r.anno % ogni === 0 || r.anno === 1) out += '<text x="' + (x + larg / 2).toFixed(1) + '" y="' + (H - 10) + '" text-anchor="middle" font-size="11" fill="#5B6878" font-family="Manrope,sans-serif">' + r.anno + '</text>';
     });
     svg.innerHTML = out;
   }
