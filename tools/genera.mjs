@@ -239,10 +239,10 @@ function piede(b) {
         <p class="motto">I tuoi progetti meritano un piano.</p>
       </div>
       <div><h4>Sito</h4><ul><li><a href="${b}chi-sono/">Chi sono</a></li><li><a href="${b}metodo/">Il mio metodo</a></li><li><a href="${b}servizi/">Servizi</a></li><li><a href="${b}approfondimenti/">Approfondimenti</a></li><li><a href="${b}contatti/">Contatti</a></li></ul></div>
-      <div><h4>Contatti</h4><ul><li><a href="tel:${TELEFONO_LINK}">${TELEFONO}</a></li><li><a href="#" data-whatsapp>Scrivimi su WhatsApp</a></li><li>[email da inserire]</li><li>In presenza e online</li></ul></div>
+      <div><h4>Contatti</h4><ul><li><a href="tel:${TELEFONO_LINK}">${TELEFONO}</a></li><li><a href="#" data-whatsapp>Scrivimi su WhatsApp</a></li><li><a href="mailto:rachele.stermieri@bancamediolanum.it">rachele.stermieri@bancamediolanum.it</a></li><li>In presenza e online</li></ul></div>
     </div>
     <div class="normativa">
-      <p class="da-verificare"><strong>Informazioni professionali e normative — da completare e verificare con la Compliance dell'intermediario prima della pubblicazione:</strong> iscrizione all'Albo unico dei consulenti finanziari (OCF) n° [ ] · intermediario per cui opera [ ] · sede [ ] · P. IVA 04232100364.</p>
+      <p class="dati-prof">Rachele Stermieri · Banker Consultant di Banca Mediolanum S.p.A. · Consulente finanziaria abilitata all'offerta fuori sede, iscritta all'Albo unico dei consulenti finanziari (OCF) n° 2853 · P. IVA 04232100364</p>
       <p>I contenuti di questo sito hanno finalità esclusivamente informative e non costituiscono consulenza personalizzata, raccomandazione, sollecitazione all'investimento né offerta di prodotti o servizi finanziari. Le simulazioni sono indicative e non rappresentano una previsione né una garanzia di risultati futuri.</p>
     </div>
     <div class="piede-fondo">
@@ -595,7 +595,7 @@ ${testaPagina(b, { briciole: [['Contatti']], occhiello: 'Contatti', titolo: 'Ini
       <ul class="recapiti">
         <li><small>Telefono</small><a href="tel:${TELEFONO_LINK}">${TELEFONO}</a></li>
         <li><small>WhatsApp</small><a href="#" data-whatsapp>Scrivimi su WhatsApp</a></li>
-        <li><small>Email</small><span>[da inserire]</span></li>
+        <li><small>Email</small><a href="mailto:rachele.stermieri@bancamediolanum.it" style="font-size:clamp(16px,4.4vw,21px);word-break:break-all">rachele.stermieri@bancamediolanum.it</a></li>
         <li><small>Incontri</small><span>In presenza e online</span></li>
       </ul>
     </div>
@@ -632,18 +632,18 @@ ${testaPagina(b, { briciole: [['Contatti']], occhiello: 'Contatti', titolo: 'Ini
 const BOZZA = '<p class="avviso-bozza"><strong>Bozza da completare.</strong> Questo testo è un modello: va completato con i dati del titolare e verificato da un legale e dalla Compliance dell\'intermediario prima della pubblicazione.</p>';
 const legali = [
   { percorso: 'privacy/', nome: 'Privacy policy', titolo: 'Informativa <em>privacy.</em>', intro: 'Come vengono trattati i dati personali raccolti attraverso questo sito.', testo: `${BOZZA}
-<h2>Titolare del trattamento</h2><p>Rachele Stermieri · [indirizzo] · [email] · P. IVA 04232100364.</p>
+<h2>Titolare del trattamento</h2><p>Rachele Stermieri · [indirizzo] · <a href="mailto:rachele.stermieri@bancamediolanum.it">rachele.stermieri@bancamediolanum.it</a> · P. IVA 04232100364.</p>
 <h2>Dati raccolti</h2><p>Dati che invii volontariamente attraverso il modulo di contatto o i recapiti indicati (nome, cognome, email, telefono, contenuto del messaggio), e dati tecnici di navigazione necessari al funzionamento del sito.</p>
 <h2>Finalità e base giuridica</h2><p>Rispondere alle tue richieste e ricontattarti (misure precontrattuali e consenso). I dati non vengono usati per finalità di marketing senza un tuo specifico consenso.</p>
 <h2>Conservazione</h2><p>[Periodo di conservazione da definire.]</p>
 <h2>Destinatari</h2><p>[Fornitori di servizi tecnici, ad esempio hosting e invio del modulo, da indicare.]</p>
-<h2>I tuoi diritti</h2><p>Puoi chiedere accesso, rettifica, cancellazione, limitazione, portabilità e opposizione al trattamento, scrivendo a [email]. Hai inoltre il diritto di proporre reclamo al Garante per la protezione dei dati personali.</p>` },
+<h2>I tuoi diritti</h2><p>Puoi chiedere accesso, rettifica, cancellazione, limitazione, portabilità e opposizione al trattamento, scrivendo a <a href="mailto:rachele.stermieri@bancamediolanum.it">rachele.stermieri@bancamediolanum.it</a>. Hai inoltre il diritto di proporre reclamo al Garante per la protezione dei dati personali.</p>` },
   { percorso: 'cookie/', nome: 'Cookie policy', titolo: 'Cookie <em>policy.</em>', intro: 'Quali cookie e servizi esterni utilizza questo sito.', testo: `${BOZZA}
 <h2>Cookie tecnici</h2><p>Il sito non utilizza cookie di profilazione né strumenti di statistica. Eventuali cookie tecnici servono solo al corretto funzionamento delle pagine.</p>
 <h2>Servizi esterni</h2><p>Per mostrare i caratteri tipografici il sito utilizza Google Fonts: il tuo browser si collega ai server di Google, che possono ricevere dati tecnici come l'indirizzo IP. [Valutare l'ospitalità dei caratteri direttamente sul sito.]</p><p>I pulsanti WhatsApp aprono il servizio di WhatsApp solo se scegli di utilizzarli.</p>
 <h2>Come gestire i cookie</h2><p>Puoi gestire o eliminare i cookie dalle impostazioni del tuo browser.</p>` },
   { percorso: 'note-legali/', nome: 'Note legali', titolo: 'Note <em>legali.</em>', intro: 'Informazioni professionali e avvertenze sull\'uso dei contenuti del sito.', testo: `${BOZZA}
-<h2>Informazioni professionali</h2><p>Rachele Stermieri · Consulente finanziaria abilitata all'offerta fuori sede · Iscrizione all'Albo unico dei consulenti finanziari (OCF) n° [ ] · Intermediario per cui opera [ ] · Sede [ ] · P. IVA 04232100364.</p>
+<h2>Informazioni professionali</h2><p>Rachele Stermieri · Banker Consultant di Banca Mediolanum S.p.A. · Consulente finanziaria abilitata all'offerta fuori sede, iscritta all'Albo unico dei consulenti finanziari (OCF), sezione consulenti finanziari abilitati all'offerta fuori sede, n° 2853 · P. IVA 04232100364 · <a href="mailto:rachele.stermieri@bancamediolanum.it">rachele.stermieri@bancamediolanum.it</a></p>
 <h2>Avvertenze</h2><p>I contenuti di questo sito hanno finalità esclusivamente informative e non costituiscono consulenza personalizzata, raccomandazione, sollecitazione all'investimento né offerta di prodotti o servizi finanziari. Prima di qualsiasi decisione è necessario leggere la documentazione informativa dei prodotti.</p>
 <h2>Simulazioni</h2><p>Le simulazioni presenti nel sito sono indicative, si basano sui valori inseriti dall'utente e non rappresentano una previsione né una garanzia di risultati futuri. Non considerano imposte, costi, inflazione e oscillazioni dei mercati.</p>
 <h2>Proprietà dei contenuti</h2><p>Testi e immagini sono di proprietà di Rachele Stermieri e non possono essere riprodotti senza autorizzazione.</p>` },

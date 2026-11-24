@@ -492,3 +492,5 @@ h2{font-size:clamp(30px,3.5vw,46px)}
   .piede ul{gap:6px}
   .piede h4{margin-bottom:10px}
 }
+.normativa .dati-prof{color:rgba(248,244,237,.72)}
+.piede a[href^="mailto"]{word-break:break-all}

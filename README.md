@@ -11,6 +11,6 @@ Sito statico (HTML, CSS e un po' di JavaScript), senza nulla da installare.
 - **Foto:** `img/rachele-tonda.jpg` e `img/rachele.jpg`.
 
 ## Da completare prima del lancio
-- Email, indirizzo e dati normativi (Albo OCF, intermediario, sede, P. IVA), da verificare con la Compliance.
+- Dati professionali inseriti (Albo OCF n° 2853, Banca Mediolanum S.p.A., P. IVA, email): da far verificare alla Compliance. Manca l'indirizzo per la privacy policy.
 - Privacy policy, cookie policy e note legali: sono bozze da far rivedere.
 - Collegare il dominio `rachelestermiericonsulente.it` (file `CNAME` + record DNS).
