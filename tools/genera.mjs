@@ -242,7 +242,7 @@ function piede(b) {
       <div><h4>Contatti</h4><ul><li><a href="tel:${TELEFONO_LINK}">${TELEFONO}</a></li><li><a href="#" data-whatsapp>Scrivimi su WhatsApp</a></li><li>[email da inserire]</li><li>In presenza e online</li></ul></div>
     </div>
     <div class="normativa">
-      <p class="da-verificare"><strong>Informazioni professionali e normative — da completare e verificare con la Compliance dell'intermediario prima della pubblicazione:</strong> iscrizione all'Albo unico dei consulenti finanziari (OCF) n° [ ] · intermediario per cui opera [ ] · sede [ ] · P. IVA [ ].</p>
+      <p class="da-verificare"><strong>Informazioni professionali e normative — da completare e verificare con la Compliance dell'intermediario prima della pubblicazione:</strong> iscrizione all'Albo unico dei consulenti finanziari (OCF) n° [ ] · intermediario per cui opera [ ] · sede [ ] · P. IVA 04232100364.</p>
       <p>I contenuti di questo sito hanno finalità esclusivamente informative e non costituiscono consulenza personalizzata, raccomandazione, sollecitazione all'investimento né offerta di prodotti o servizi finanziari. Le simulazioni sono indicative e non rappresentano una previsione né una garanzia di risultati futuri.</p>
     </div>
     <div class="piede-fondo">
@@ -632,7 +632,7 @@ ${testaPagina(b, { briciole: [['Contatti']], occhiello: 'Contatti', titolo: 'Ini
 const BOZZA = '<p class="avviso-bozza"><strong>Bozza da completare.</strong> Questo testo è un modello: va completato con i dati del titolare e verificato da un legale e dalla Compliance dell\'intermediario prima della pubblicazione.</p>';
 const legali = [
   { percorso: 'privacy/', nome: 'Privacy policy', titolo: 'Informativa <em>privacy.</em>', intro: 'Come vengono trattati i dati personali raccolti attraverso questo sito.', testo: `${BOZZA}
-<h2>Titolare del trattamento</h2><p>Rachele Stermieri · [indirizzo] · [email] · [P. IVA].</p>
+<h2>Titolare del trattamento</h2><p>Rachele Stermieri · [indirizzo] · [email] · P. IVA 04232100364.</p>
 <h2>Dati raccolti</h2><p>Dati che invii volontariamente attraverso il modulo di contatto o i recapiti indicati (nome, cognome, email, telefono, contenuto del messaggio), e dati tecnici di navigazione necessari al funzionamento del sito.</p>
 <h2>Finalità e base giuridica</h2><p>Rispondere alle tue richieste e ricontattarti (misure precontrattuali e consenso). I dati non vengono usati per finalità di marketing senza un tuo specifico consenso.</p>
 <h2>Conservazione</h2><p>[Periodo di conservazione da definire.]</p>
@@ -643,7 +643,7 @@ const legali = [
 <h2>Servizi esterni</h2><p>Per mostrare i caratteri tipografici il sito utilizza Google Fonts: il tuo browser si collega ai server di Google, che possono ricevere dati tecnici come l'indirizzo IP. [Valutare l'ospitalità dei caratteri direttamente sul sito.]</p><p>I pulsanti WhatsApp aprono il servizio di WhatsApp solo se scegli di utilizzarli.</p>
 <h2>Come gestire i cookie</h2><p>Puoi gestire o eliminare i cookie dalle impostazioni del tuo browser.</p>` },
   { percorso: 'note-legali/', nome: 'Note legali', titolo: 'Note <em>legali.</em>', intro: 'Informazioni professionali e avvertenze sull\'uso dei contenuti del sito.', testo: `${BOZZA}
-<h2>Informazioni professionali</h2><p>Rachele Stermieri · Consulente finanziaria abilitata all'offerta fuori sede · Iscrizione all'Albo unico dei consulenti finanziari (OCF) n° [ ] · Intermediario per cui opera [ ] · Sede [ ] · P. IVA [ ].</p>
+<h2>Informazioni professionali</h2><p>Rachele Stermieri · Consulente finanziaria abilitata all'offerta fuori sede · Iscrizione all'Albo unico dei consulenti finanziari (OCF) n° [ ] · Intermediario per cui opera [ ] · Sede [ ] · P. IVA 04232100364.</p>
 <h2>Avvertenze</h2><p>I contenuti di questo sito hanno finalità esclusivamente informative e non costituiscono consulenza personalizzata, raccomandazione, sollecitazione all'investimento né offerta di prodotti o servizi finanziari. Prima di qualsiasi decisione è necessario leggere la documentazione informativa dei prodotti.</p>
 <h2>Simulazioni</h2><p>Le simulazioni presenti nel sito sono indicative, si basano sui valori inseriti dall'utente e non rappresentano una previsione né una garanzia di risultati futuri. Non considerano imposte, costi, inflazione e oscillazioni dei mercati.</p>
 <h2>Proprietà dei contenuti</h2><p>Testi e immagini sono di proprietà di Rachele Stermieri e non possono essere riprodotti senza autorizzazione.</p>` },
