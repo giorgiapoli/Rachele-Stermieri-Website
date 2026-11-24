@@ -289,7 +289,7 @@ ${indicizza ? `<link rel="canonical" href="${url}">` : '<meta name="robots" cont
 <meta property="og:title" content="${titolo}">
 <meta property="og:description" content="${descrizione}">
 <meta property="og:url" content="${url}">
-<meta property="og:image" content="${DOMINIO}/img/rachele-intera.jpg">
+<meta property="og:image" content="${DOMINIO}/img/rachele-ritratto.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%2300436C'/%3E%3Ctext x='16' y='21.5' font-size='14' text-anchor='middle' fill='%23F8FAFC' font-family='Georgia,serif' font-style='italic'%3ERS%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -357,10 +357,10 @@ generate.push(pagina({
   percorso: '', classe: 'home',
   titolo: 'Rachele Stermieri · Consulente finanziaria — I tuoi progetti meritano un piano',
   descrizione: 'Rachele Stermieri, consulente finanziaria. Risparmio, investimenti, previdenza, protezione, mutui e pianificazione patrimoniale: un percorso costruito intorno a te, in presenza e online.',
-  stato: `\n<link rel="preload" as="image" href="img/rachele-intera.jpg">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialService","name":"Rachele Stermieri · Consulente finanziaria","url":"${DOMINIO}/","telephone":"${TELEFONO}","email":"rachele.stermieri@bancamediolanum.it","image":"${DOMINIO}/img/rachele-intera.jpg","areaServed":"IT","slogan":"I tuoi progetti meritano un piano."}</script>`,
+  stato: `\n<link rel="preload" as="image" href="img/rachele-ritratto.jpg">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialService","name":"Rachele Stermieri · Consulente finanziaria","url":"${DOMINIO}/","telephone":"${TELEFONO}","email":"rachele.stermieri@bancamediolanum.it","image":"${DOMINIO}/img/rachele-ritratto.jpg","areaServed":"IT","slogan":"I tuoi progetti meritano un piano."}</script>`,
   corpo: b => `
 <section class="eroe">
-  <div class="eroe-foto" aria-hidden="true"><img src="${b}img/rachele-intera.jpg" alt="" width="800" height="1067" fetchpriority="high"></div>
+  <div class="eroe-foto" aria-hidden="true"><img src="${b}img/rachele-ritratto.jpg" alt="" width="1021" height="1540" fetchpriority="high"></div>
   <div class="eroe-velo" aria-hidden="true"></div>
   <div class="contenitore eroe-testo">
     <p class="occhiello entra"><span class="solo-largo">Rachele Stermieri · </span>Consulente finanziaria</p>
@@ -409,7 +409,7 @@ ${testaPagina(b, { briciole: [['Chi sono']], occhiello: 'Chi sono', titolo: 'Pri
 
 <section class="sezione chi-blocco">
   <div class="contenitore">
-    <figure class="arco compare"><img src="${b}img/rachele.jpg" alt="Rachele Stermieri" width="440" height="550"></figure>
+    <figure class="arco compare"><img src="${b}img/rachele-ritratto.jpg" alt="Rachele Stermieri" width="1021" height="1540"></figure>
     <div class="testo compare d1">
       <h2>Il mio lavoro parte <em>dalle persone, non dai prodotti.</em></h2>
       <p>Ogni persona ha una storia, delle esigenze e dei desideri diversi. Per questo il primo incontro è dedicato ad ascoltarti. Poi costruiamo insieme un percorso coerente con ciò che desideri, e lo seguiamo nel tempo.</p>

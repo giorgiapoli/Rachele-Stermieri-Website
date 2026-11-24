@@ -773,3 +773,8 @@ body.home.menu-aperto .apri-menu span{background:transparent}
   .home-introduzione h1 { font-size: clamp(44px, 12vw, 53px); }
   .home-introduzione .btn { padding-inline: 16px; }
 }
+/* Ritratto professionale nell'apertura */
+.eroe{background:#003A5C}
+.eroe-foto img{object-position:50% 18%}
+.arco img{object-position:50% 18%}
+@media (max-width:900px){.eroe-foto{height:64%}.eroe-foto img{object-position:50% 12%}}
