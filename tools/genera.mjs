@@ -15,67 +15,67 @@ const TELEFONO_LINK = '+393492712137';
 const SERVIZI = [
   {
     slug: 'conto-corrente', nome: 'Conto corrente', breve: 'Uno strumento di ogni giorno, adatto alle tue abitudini.',
-    titolo: 'Un conto <em>che ti somiglia.</em>',
+    titolo: 'Gestire il tuo conto non è mai stato <em>così semplice.</em>',
     intro: 'Il conto corrente è uno degli strumenti che utilizziamo ogni giorno. È importante che sia adatto alle nostre abitudini e alle nostre esigenze.',
     domande: [
       { d: 'Posso cambiare conto corrente senza difficoltà?',
-        r: 'Sì, certamente. Cambiare conto corrente è molto più semplice di quanto si possa pensare. La procedura è guidata e richiede pochi passaggi.',
-        a: 'Possiamo valutare insieme le alternative e individuare un conto più adatto alle tue esigenze, accompagnandoti nel trasferimento.' },
+        r: 'Sì, certamente. Cambiare conto è più semplice di quanto si possa pensare.' },
+      { d: 'Non riesco a capire quanto costa il conto che ho ora.',
+        r: 'Ti aiuto io. I tuoi soldi devono essere liberi di muoversi, non appesantiti dai costi.' },
     ],
-    aiuto: 'Partiamo da come usi il conto ogni giorno, per trovare la soluzione più adatta e renderti il passaggio semplice.',
-    passi: ['Guardiamo insieme le tue abitudini', 'Valutiamo le alternative più adatte', 'Ti accompagno nel trasferimento'],
+    aiutoFinale: 'Valutiamo quanto spendi con il tuo conto attuale e ti accompagno nella scelta di un conto più giusto per te.',
   },
   {
-    slug: 'piano-di-accumulo', nome: 'Piano di accumulo', breve: 'I piccoli passi di oggi per i progetti di domani.',
-    titolo: 'I piccoli passi di oggi possono contribuire a costruire <em>i progetti di domani.</em>',
-    intro: 'Con un piano di accumulo metti da parte una cifra costante, mese dopo mese. Un modo semplice per trasformare il risparmio in un\'abitudine.',
+    slug: 'piano-di-accumulo', nome: 'Piano di accumulo', breve: 'I piccoli passi di oggi per i tuoi progetti di domani.',
+    titolo: 'I piccoli passi di oggi contribuiscono a costruire <em>i tuoi progetti di domani.</em>',
+    intro: 'Metti da parte una somma mese dopo mese. Invece di lasciare i risparmi fermi sul conto, mettili al lavoro per il tuo futuro.',
     domande: [
       { d: 'Cos\'è un piano di accumulo?',
-        r: 'È un modo di investire a piccoli passi: invece di versare tutto in una volta, versi una cifra costante a intervalli regolari, di solito ogni mese. Così il risparmio diventa un\'abitudine e l\'ingresso sui mercati avviene in modo graduale.',
-        a: 'Insieme definiamo l\'obiettivo, la durata e la rata, e scegliamo gli strumenti più coerenti con il tuo profilo.' },
+        r: 'Un piano di accumulo è un modo semplice e graduale per investire i propri risparmi nel tempo. Ti permette di accantonare e investire automaticamente una somma ogni mese, anche piccola. Così il risparmio diventa un\'abitudine.' },
       { d: 'Posso iniziare con 50-100 euro al mese?',
-        r: 'Sì. Il piano di accumulo nasce proprio per permettere di iniziare anche con cifre contenute. Più dell\'importo, conta la costanza.',
-        a: 'Valutiamo insieme una rata sostenibile rispetto alle tue entrate e alle tue spese, così da poterla mantenere nel tempo.' },
+        r: 'Sì. Un piano di accumulo si può iniziare anche con importi contenuti, in base agli strumenti disponibili: più dell\'importo, conta la costanza nel tempo. Possiamo individuare insieme una rata sostenibile rispetto alle tue entrate e alle tue spese.' },
       { d: 'Posso modificare l\'importo dei versamenti?',
-        r: 'Sì. La vita cambia, e il piano può cambiare con te: puoi aumentare o ridurre la rata quando cambiano le tue possibilità.',
-        a: 'Ci rivediamo periodicamente per verificare che la rata sia sempre in equilibrio con la tua situazione.' },
+        r: 'Sì, di norma è possibile aumentare o ridurre la rata in base alle tue esigenze, secondo le condizioni dello strumento scelto. Il piano può cambiare insieme alla tua vita.' },
       { d: 'Posso sospendere temporaneamente i versamenti?',
-        r: 'Sì. Se attraversi un periodo in cui ti serve più liquidità, i versamenti possono essere sospesi e ripresi in un secondo momento, secondo le condizioni dello strumento scelto.',
-        a: 'Ti aiuto a capire come farlo e quale effetto può avere sul tuo obiettivo.' },
+        r: 'Sì, in genere i versamenti possono essere sospesi per un periodo e ripresi in un secondo momento, secondo le condizioni dello strumento scelto.' },
       { d: 'Posso creare un piano di accumulo per mio figlio?',
-        r: 'Certo, ed è un bellissimo progetto: mettere da parte, un poco alla volta, qualcosa per il suo futuro, per i suoi studi o per i suoi sogni.',
-        a: 'Possiamo valutare insieme lo strumento più adatto, la durata e l\'importo, in base al tempo che hai davanti.' },
+        r: 'Sì, certamente. È un bellissimo progetto. Un piano di accumulo può essere uno strumento da valutare per costruire nel tempo una risorsa da destinare al futuro di tuo figlio. Possiamo individuare insieme un percorso coerente con le tue esigenze e i tuoi obiettivi.' },
       { d: 'È meglio iniziare con una piccola cifra oppure aspettare di avere più capitale?',
-        r: 'Il tempo è uno dei più grandi alleati dell\'investimento. Iniziare prima, anche con poco, significa dare più tempo ai tuoi risparmi. Il piano di accumulo ti permette di sfruttare il meccanismo dell\'interesse composto: gli eventuali rendimenti maturati si sommano al capitale e, nel tempo, possono a loro volta generarne altri.',
-        a: 'Possiamo confrontare insieme le due strade. Intanto puoi fare una prova con il calcolatore qui sotto.' },
+        r: 'Il nostro alleato più grande è il tempo. Iniziare prima permette di dare più tempo ai propri risparmi per crescere. Un piano di accumulo sfrutta infatti il meccanismo dell\'interesse composto: i rendimenti maturati possono a loro volta contribuire alla crescita del capitale. Anche piccoli versamenti, se mantenuti nel tempo, possono contribuire alla costruzione di un capitale.' },
     ],
-    aiuto: 'Un piano di accumulo funziona quando è costruito sulle tue possibilità reali e sui tuoi obiettivi, e quando viene seguito nel tempo.',
-    passi: ['Definiamo obiettivo e durata', 'Scegliamo una rata sostenibile', 'Rivediamo il piano nel tempo'],
+    interesse: true,
     calcolatore: true,
   },
   {
     slug: 'investimenti', nome: 'Investimenti', breve: 'Dare una direzione ai propri risparmi.',
     titolo: 'Dare una direzione <em>ai propri risparmi.</em>',
-    intro: 'Investire significa scegliere dove vuoi andare e con quali tempi. Ogni scelta ha senso solo se è coerente con i tuoi obiettivi.',
+    intro: [
+      'Ogni persona ha obiettivi, esigenze e possibilità diverse. Per questo non esiste un unico modo di investire, ma un percorso da costruire insieme, partendo dall\'ascolto e dal dialogo.',
+      'Il primo passo è conoscere le tue esigenze, le risorse a disposizione e i tuoi progetti, per individuare un orizzonte temporale coerente con i tuoi obiettivi.',
+      'Da qui nasce la costruzione di un portafoglio di investimenti equilibrato, adeguato al tuo profilo, che tenga conto delle tue necessità e della tua propensione al rischio.',
+    ],
     domande: [
       { d: 'Posso trasferire i miei investimenti da un\'altra banca?',
-        r: 'Sì, è possibile trasferire gli investimenti da un intermediario a un altro. Prima di farlo, però, è importante capire bene cosa possiedi e se è ancora coerente con i tuoi obiettivi.',
-        a: 'Analizziamo insieme gli investimenti che hai oggi, verifichiamo se sono coerenti con i tuoi obiettivi, i tuoi tempi e il tuo profilo di rischio, e valutiamo l\'eventuale trasferimento.' },
+        r: 'Assolutamente sì. Valutiamo il portafoglio che hai presso l\'altra banca e capiamo se è coerente con i tuoi obiettivi, il tuo orizzonte temporale e le tue esigenze.' },
+      { d: 'Meglio lasciare i soldi sul conto o investirli?',
+        r: 'Dipende dai tuoi obiettivi e dai tempi. Una parte di liquidità sul conto è utile per le spese quotidiane e gli imprevisti; il denaro che non serve nel breve periodo può invece essere valutato per un investimento, coerente con il tuo profilo e con il tempo che hai davanti. Insieme cerchiamo l\'equilibrio giusto per te.' },
+      { d: 'Quanto denaro serve per iniziare a investire?',
+        r: 'Non esiste una cifra uguale per tutti: si può iniziare anche con importi contenuti, ad esempio attraverso un piano di accumulo. Conta partire da una somma coerente con le tue possibilità e con i tuoi obiettivi.' },
     ],
-    aiuto: 'Prima di ogni scelta, una fotografia chiara: cosa hai, perché lo hai e dove vuoi arrivare.',
-    passi: ['Analizziamo gli investimenti esistenti', 'Verifichiamo la coerenza con i tuoi obiettivi', 'Valutiamo l\'eventuale trasferimento'],
+    aiutoFinale: 'Affrontiamo tutte le tue domande insieme. Non è nulla di così complicato, basta solo partire.',
   },
   {
-    slug: 'previdenza', nome: 'Previdenza', breve: 'Il futuro si costruisce anche pensando alla pensione.',
-    titolo: 'Il futuro si costruisce anche <em>pensando alla pensione.</em>',
-    intro: 'Sapere quando e con quanto andrai in pensione ti permette di prepararti per tempo, con serenità.',
+    slug: 'previdenza', nome: 'Previdenza', breve: 'Costruisci oggi la tua serenità previdenziale.',
+    titolo: 'Costruisci oggi la tua <em>serenità previdenziale.</em>',
+    intro: [
+      'Lavoriamo per tanti anni ed è importante arrivare alla pensione con le risorse necessarie per vivere serenamente, coltivare le proprie passioni, viaggiare e affrontare con tranquillità eventuali spese impreviste.',
+      'Pensarci oggi significa regalarsi più libertà e serenità domani, con benefici fiscali e rendimenti che possono essere diversi nel tempo.',
+    ],
     domande: [
       { d: 'Quando dovrei iniziare a pensare alla pensione?',
-        r: 'Il prima possibile. Prima si inizia a pianificare, più tempo si ha a disposizione: per versare con calma, per correggere la rotta e per far lavorare i propri risparmi.',
-        a: 'Facciamo il punto sulla tua situazione e costruiamo un percorso adatto alla tua età e ai tuoi obiettivi.' },
+        r: 'Il prima possibile. Anche nella pianificazione previdenziale il tempo è uno dei nostri alleati più importanti. Iniziare a pensarci per tempo permette di valutare le diverse possibilità e costruire un percorso più consapevole.' },
       { d: 'Il mio TFR è investito nel modo giusto per me?',
-        r: 'Il TFR può restare in azienda oppure essere destinato a un fondo pensione. Sono scelte diverse, con effetti diversi nel tempo, e spesso vengono fatte senza conoscerle davvero.',
-        a: 'Verifichiamo insieme dove si trova oggi il tuo TFR e se la scelta è coerente con te e con i tuoi progetti.' },
+        r: 'Lasciare il TFR in azienda oppure destinarlo a un fondo pensione comporta caratteristiche, benefici e condizioni diverse, e non esiste una scelta uguale per tutti: dipende dalla tua situazione, dai tuoi obiettivi e dal tempo che hai davanti. Possiamo valutarle insieme.' },
       { d: 'Sto sfruttando la deducibilità dei versamenti?',
         r: 'I versamenti a una forma di previdenza complementare si possono dedurre dal reddito fino a 5.164,57 euro l\'anno. È un vantaggio fiscale che spesso non viene sfruttato del tutto.',
         a: 'Guardiamo insieme quanto stai già versando e valutiamo se ha senso fare di più.' },
@@ -86,8 +86,6 @@ const SERVIZI = [
         r: 'La pensione può essere più bassa dell\'ultimo stipendio. Conoscere in anticipo la differenza permette di organizzarsi per tempo.',
         a: 'Stimiamo insieme l\'importo della tua pensione e, se serve, valutiamo come integrarla.' },
     ],
-    aiuto: 'La pensione è un progetto lungo: va impostato con cura e rivisto mentre la tua vita cambia.',
-    passi: ['Facciamo il punto sulla tua situazione', 'Stimiamo quando e con quanto', 'Costruiamo un piano per integrarla'],
   },
   {
     slug: 'protezione', nome: 'Protezione', breve: 'Proteggere ciò che conta davvero.',
@@ -328,7 +326,7 @@ function testaPagina(b, { briciole = [], occhiello, titolo, intro }) {
       <p class="occhiello compare">${occhiello}</p>
       <h1 class="compare d1">${titolo}</h1>
     </div>
-    <p class="intro compare d2">${intro}</p>
+    ${Array.isArray(intro) ? `<div class="intro-blocco compare d2">${intro.map(t => `<p class="intro">${t}</p>`).join('')}</div>` : `<p class="intro compare d2">${intro}</p>`}
   </div>
 </section>`;
 }
@@ -340,13 +338,99 @@ function grigliaServizi(b) {
 }
 
 const FASI = [
-  ['Ascolto', 'Conoscere la persona, la sua storia e i suoi progetti.'],
-  ['Analisi', 'Comprendere la situazione economica e patrimoniale, le risorse e le priorità.'],
-  ['Pianificazione', 'Costruire un percorso coerente con le tue esigenze, le tue possibilità e il tuo profilo di rischio.'],
-  ['Accompagnamento', 'Seguirti nel tempo, attraverso il dialogo e verifiche periodiche.'],
+  ['Ascolto', 'Conoscere la persona, la sua storia, le sue esigenze e i suoi desideri.'],
+  ['Analisi', 'Comprendere la situazione economica e patrimoniale, le risorse disponibili e le priorità.'],
+  ['Pianificazione', 'Costruire un percorso coerente con gli obiettivi, le possibilità e il profilo di rischio.'],
+  ['Accompagnamento', 'Seguire la persona nel tempo, attraverso il dialogo e verifiche periodiche.'],
 ];
 const FRASE_METODO = '«Non esiste un unico percorso valido per tutti. Esiste un percorso da costruire intorno a ogni persona.»';
 const FORMAZIONE = ['Laurea in Economia Aziendale e Management', 'Master in Gestione d\'Impresa', 'Formazione professionale in ambito finanziario'];
+
+/* ------------------------------------------------------------------ */
+/* Blocchi riusabili: calcolatore PAC, esempio di interesse composto, chiusure */
+/* ------------------------------------------------------------------ */
+const CALCOLATORE = `
+<section class="sezione" id="calcolatore">
+  <div class="contenitore">
+    <div class="testa-sezione compare">
+      <div><p class="occhiello">Calcolatore PAC</p><h2>Prova a fare <em>una simulazione.</em></h2></div>
+    </div>
+    <div class="calcolatore compare">
+      <form class="calc-campi" id="calc" novalidate>
+        <div class="calc-campo"><label for="c-iniziale">Capitale iniziale</label><div class="entrata"><input id="c-iniziale" type="number" inputmode="decimal" min="0" step="100" value="1000"><span class="unita">€</span></div></div>
+        <div class="calc-campo"><label for="c-mensile">Versamento mensile</label><div class="entrata"><input id="c-mensile" type="number" inputmode="decimal" min="0" step="10" value="100"><span class="unita">€</span></div></div>
+        <div class="calc-campo"><label for="c-rendimento">Rendimento annuo</label><div class="entrata"><input id="c-rendimento" type="number" inputmode="decimal" min="-20" max="20" step="0.1" value="3"><span class="unita">%</span></div><small>Il valore lo scegli tu: non è una previsione.</small></div>
+        <div class="calc-campo"><label for="c-anni">Durata</label><div class="entrata"><input id="c-anni" type="number" inputmode="numeric" min="1" max="50" step="1" value="20"><span class="unita">anni</span></div></div>
+      </form>
+      <div class="calc-risultati" aria-live="polite">
+        <div class="cifre">
+          <div class="cifra"><small>Capitale versato</small><b id="r-versato">—</b></div>
+          <div class="cifra"><small>Interessi</small><b id="r-interessi">—</b></div>
+          <div class="cifra finale-c"><small>Capitale finale</small><b id="r-finale">—</b></div>
+        </div>
+        <div class="grafico-calc"><svg id="c-grafico" viewBox="0 0 640 280" role="img" aria-label="Grafico: capitale versato e interessi anno per anno"></svg>
+          <div class="legenda"><span><i style="background:#00436C"></i>Capitale versato</span><span><i style="background:#6CADDF"></i>Interessi</span></div>
+        </div>
+        <details class="tabella-anni">
+          <summary>Tabella anno per anno</summary>
+          <div class="scorri-tabella"><table><thead><tr><th scope="col">Anno</th><th scope="col">Capitale versato</th><th scope="col">Interessi</th><th scope="col">Capitale finale</th></tr></thead><tbody id="c-tabella"></tbody></table></div>
+        </details>
+        <p class="nota-calc">Questa è una simulazione basata sul rendimento che hai inserito: non è una previsione né un risultato garantito. Il calcolo considera la capitalizzazione mensile e i versamenti a fine mese; non tiene conto di imposte, costi, inflazione e oscillazioni dei mercati.</p>
+      </div>
+    </div>
+  </div>
+</section>`;
+
+/* Esempio visivo dell'interesse composto: 1.000 € versati una volta, rendimento ipotetico del 3% annuo (capitalizzazione annuale) */
+const INTERESSE = (() => {
+  const capitale = 1000, tasso = 0.03, anni = [10, 20, 30];
+  const fmt = n => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  const righe = anni.map(n => {
+    const totale = capitale * Math.pow(1 + tasso, n), semplici = capitale * tasso * n;
+    return { n, totale, semplici, extra: totale - capitale - semplici };
+  });
+  const max = righe[righe.length - 1].totale;
+  return `
+<section class="sezione sezione-crema" id="interesse-composto">
+  <div class="contenitore interesse">
+    <div class="compare">
+      <p class="occhiello">L'interesse composto</p>
+      <h2>Gli interessi producono <em>altri interessi.</em></h2>
+      <p class="intro">Esempio: ${fmt(capitale)} € versati una sola volta, con un rendimento ipotetico del 3% annuo. Ogni anno gli interessi maturati si aggiungono al capitale e, dagli anni successivi, producono a loro volta interessi. Più passa il tempo, più questa parte aumenta.</p>
+      <ul class="legenda-interesse">
+        <li><i class="seg-cap"></i>Capitale versato</li>
+        <li><i class="seg-int"></i>Interessi sul capitale</li>
+        <li><i class="seg-extra"></i>Interessi sugli interessi</li>
+      </ul>
+    </div>
+    <div class="compare d1">
+      <div class="esempio-barre">
+        ${righe.map(x => `<div class="barra-gruppo"><small>${fmt(x.totale)} €</small><div class="barra" role="img" aria-label="Dopo ${x.n} anni: capitale ${fmt(capitale)} euro, interessi sul capitale ${fmt(x.semplici)} euro, interessi sugli interessi ${fmt(x.extra)} euro" style="height:${(x.totale / max * 100).toFixed(1)}%"><i class="seg-extra" style="flex:${x.extra.toFixed(2)}"></i><i class="seg-int" style="flex:${x.semplici}"></i><i class="seg-cap" style="flex:${capitale}"></i></div><b>${x.n} anni</b></div>`).join('\n        ')}
+      </div>
+      <p class="nota-calc">Esempio illustrativo con capitalizzazione annuale, senza imposte e costi: non è una previsione né un risultato garantito. I rendimenti reali possono essere diversi e anche negativi.</p>
+    </div>
+  </div>
+</section>`;
+})();
+
+const aiutoFinale = (b, testo) => `
+<section class="aiuto-finale">
+  <div class="contenitore">
+    <h2 class="compare">Come posso <em>aiutarti?</em></h2>
+    <div class="compare d1">
+      <p>${testo}</p>
+      <div class="azioni"><a href="${b}contatti/" class="btn btn-pieno">Inizia a pianificare il tuo futuro</a><a href="#" data-whatsapp class="collegamento">Scrivimi su WhatsApp <span aria-hidden="true">→</span></a></div>
+    </div>
+  </div>
+</section>`;
+
+const ctaServizio = b => `
+<section class="cta-servizio">
+  <div class="contenitore">
+    <h2 class="compare">Parliamone <em>insieme.</em></h2>
+    <div class="azioni compare d1"><a href="${b}contatti/" class="btn btn-pieno">Inizia a pianificare il tuo futuro</a><a href="#" data-whatsapp class="collegamento">Scrivimi su WhatsApp <span aria-hidden="true">→</span></a></div>
+  </div>
+</section>`;
 
 const generate = [];
 
@@ -354,7 +438,7 @@ const generate = [];
 /* Home                                                                */
 /* ------------------------------------------------------------------ */
 generate.push(pagina({
-  percorso: '', classe: 'home',
+  percorso: '', classe: 'home', script: ['calcolatore.js'],
   titolo: 'Rachele Stermieri · Consulente finanziaria — I tuoi progetti meritano un piano',
   descrizione: 'Rachele Stermieri, consulente finanziaria. Risparmio, investimenti, previdenza, protezione, mutui e pianificazione patrimoniale: un percorso costruito intorno a te, in presenza e online.',
   stato: `\n<link rel="preload" as="image" href="img/rachele-ritratto.jpg">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialService","name":"Rachele Stermieri · Consulente finanziaria","url":"${DOMINIO}/","telephone":"${TELEFONO}","email":"rachele.stermieri@bancamediolanum.it","image":"${DOMINIO}/img/rachele-ritratto.jpg","areaServed":"IT","slogan":"I tuoi progetti meritano un piano."}</script>`,
@@ -365,34 +449,39 @@ generate.push(pagina({
   <div class="contenitore eroe-testo">
     <p class="occhiello entra"><span class="solo-largo">Rachele Stermieri · </span>Consulente finanziaria</p>
     <h1 class="entra e1">I tuoi progetti<br><em>meritano un piano.</em></h1>
-    <p class="eroe-sotto entra e2">Prima di parlare di numeri, ascolto le persone.</p>
+    <p class="eroe-sotto entra e2">Attenzione, fiducia e rispetto dei vostri risparmi.</p>
     <div class="azioni entra e3">
       <a href="${b}contatti/" class="btn btn-chiaro">Inizia a pianificare il tuo futuro</a>
-      <a href="#" data-whatsapp class="btn btn-vetro solo-largo">${icona}WhatsApp</a>
     </div>
-    <ul class="eroe-dati entra e4">
-      <li><b>9</b><span>Aree di consulenza</span></li>
-      <li><b>OCF</b><span>Albo n° 2853</span></li>
-      <li><b>Online</b><span>e di persona</span></li>
-    </ul>
   </div>
-  <a href="#servizi" class="scendi" aria-label="Scorri ai servizi"><span></span></a>
+  <a href="#metodo" class="scendi" aria-label="Scorri"><span></span></a>
 </section>
 
-<section class="sezione servizi-home" id="servizi">
+<section class="sezione metodo-home" id="metodo">
   <div class="contenitore">
-    <div class="testa-sezione compare"><h2>Di cosa possiamo <em>parlare.</em></h2><a href="${b}servizi/" class="collegamento">Tutti i servizi <span aria-hidden="true">→</span></a></div>
-    <ul class="pillole">
-      ${SERVIZI.map((s, i) => `<li class="compare" style="--i:${i}"><a href="${b}servizi/${s.slug}/">${s.nome}${freccia}</a></li>`).join('\n      ')}
-    </ul>
+    <div class="metodo-home-testa compare">
+      <h2>Il mio <em>metodo.</em></h2>
+      <p class="frase">${FRASE_METODO}</p>
+    </div>
+    <ol class="metodo-fasi">
+      ${FASI.map(([t, d], i) => `<li class="compare" style="--i:${i}"><span>0${i + 1}</span><h3>${t}</h3><p>${d}</p></li>`).join('\n      ')}
+    </ol>
   </div>
 </section>
 
+<section class="sezione sezione-crema servizi-home" id="servizi">
+  <div class="contenitore">
+    <div class="testa-sezione compare"><h2>In cosa posso <em>esserti utile?</em></h2><a href="${b}servizi/" class="collegamento">Tutti i servizi <span aria-hidden="true">→</span></a></div>
+    ${grigliaServizi(b)}
+  </div>
+</section>
+${CALCOLATORE}
 <section class="banda">
   <div class="banda-foto" aria-hidden="true"><img src="${b}img/rachele-posa.jpg" alt="" width="977" height="1610" loading="lazy"></div>
   <div class="contenitore banda-testo">
-    <blockquote class="compare">Non esiste un unico percorso. <em>Esiste il tuo.</em></blockquote>
-    <div class="azioni compare d1"><a href="${b}metodo/" class="btn btn-chiaro">Il mio metodo</a><a href="${b}chi-sono/" class="collegamento">Chi sono <span aria-hidden="true">→</span></a></div>
+    <h2 class="compare">Ogni progetto inizia da <em>una conversazione.</em></h2>
+    <p class="compare d1">Raccontami cosa desideri realizzare: insieme possiamo iniziare a costruire un percorso.</p>
+    <div class="azioni compare d2"><a href="${b}contatti/" class="btn btn-chiaro">Inizia a pianificare il tuo futuro</a></div>
   </div>
 </section>`,
 }));
@@ -424,9 +513,9 @@ ${testaPagina(b, { briciole: [['Chi sono']], occhiello: 'Chi sono', titolo: 'Pri
 /* Metodo                                                              */
 /* ------------------------------------------------------------------ */
 const FASI_DETTAGLIO = [
-  ['Ascolto', 'Conoscere la persona, la sua storia e i suoi progetti.', 'Il primo incontro è dedicato a te: a cosa desideri, a cosa ti preoccupa, a dove vuoi arrivare. Prima di parlare di numeri, voglio capire chi sei.'],
-  ['Analisi', 'Comprendere la situazione economica e patrimoniale, le risorse e le priorità.', 'Guardiamo insieme entrate, spese, risparmi, investimenti e coperture già presenti, per avere una fotografia chiara del punto di partenza.'],
-  ['Pianificazione', 'Costruire un percorso coerente con le esigenze, le possibilità e il profilo di rischio.', 'Ti propongo un percorso pensato su di te, spiegato con parole semplici, perché ogni scelta sia chiara prima di essere presa.'],
+  ['Ascolto', 'Conoscere la persona, la sua storia, le sue esigenze e i suoi desideri.', 'Il primo incontro è dedicato a te: a cosa desideri, a cosa ti preoccupa, a dove vuoi arrivare. Prima di parlare di numeri, voglio capire chi sei.'],
+  ['Analisi', 'Comprendere la situazione economica e patrimoniale, le risorse disponibili e le priorità.', 'Guardiamo insieme entrate, spese, risparmi, investimenti e coperture già presenti, per avere una fotografia chiara del punto di partenza.'],
+  ['Pianificazione', 'Costruire un percorso coerente con gli obiettivi, le possibilità e il profilo di rischio.', 'Ti propongo un percorso pensato su di te, spiegato con parole semplici, perché ogni scelta sia chiara prima di essere presa.'],
   ['Accompagnamento', 'Seguire la persona nel tempo, attraverso il dialogo e verifiche periodiche.', 'La vita cambia e il piano cambia con te. Ci rivediamo con regolarità per verificare che il percorso sia sempre quello giusto.'],
 ];
 generate.push(pagina({
@@ -434,15 +523,14 @@ generate.push(pagina({
   titolo: 'Il mio metodo · Rachele Stermieri, consulente finanziaria',
   descrizione: 'Ascolto, analisi, pianificazione e accompagnamento: il metodo di Rachele Stermieri per costruire un percorso finanziario intorno a ogni persona.',
   corpo: b => `
-${testaPagina(b, { briciole: [['Il mio metodo']], occhiello: 'Il mio metodo', titolo: 'Un percorso <em>costruito intorno a te.</em>', intro: 'Non esiste un unico percorso valido per tutti. Esiste un percorso da costruire intorno a ogni persona.' })}
+${testaPagina(b, { briciole: [['Il mio metodo']], occhiello: 'Il mio metodo', titolo: 'Un percorso <em>costruito intorno a te.</em>', intro: 'Quattro fasi, dal primo ascolto alle verifiche nel tempo.' })}
 
 <section class="sezione metodo-blocco">
   <div class="contenitore">
     <div class="fisso compare">
       <p class="occhiello">Quattro fasi</p>
       <h2>Dalla tua storia <em>al tuo piano.</em></h2>
-      <p class="frase">${FRASE_METODO}</p>
-      <a href="${b}contatti/" class="btn btn-pieno">Inizia dal primo incontro</a>
+      <a href="${b}contatti/" class="btn btn-pieno">Inizia a pianificare il tuo futuro</a>
     </div>
     <ol class="fasi">
       ${FASI_DETTAGLIO.map(([t, d, e]) => `<li class="compare"><div><h3>${t}</h3><p><strong style="font-weight:500;color:var(--blu)">${d}</strong></p><p>${e}</p></div></li>`).join('\n      ')}
@@ -457,9 +545,9 @@ ${testaPagina(b, { briciole: [['Il mio metodo']], occhiello: 'Il mio metodo', ti
 generate.push(pagina({
   percorso: 'servizi/', attiva: 'servizi',
   titolo: 'Servizi · Rachele Stermieri, consulente finanziaria',
-  descrizione: 'Conto corrente, piano di accumulo, investimenti, previdenza, protezione, mutui, prestiti personali, grandi patrimoni e budget: le domande concrete e come posso aiutarti.',
+  descrizione: 'Conto corrente, piano di accumulo, investimenti, previdenza, protezione, mutui, prestiti personali, grandi patrimoni e budget: le situazioni concrete in cui ti puoi riconoscere.',
   corpo: b => `
-${testaPagina(b, { briciole: [['Servizi']], occhiello: 'Servizi', titolo: 'Di cosa possiamo <em>parlare insieme.</em>', intro: 'Ogni servizio parte dalle domande che ti fai davvero. Scegli quello che ti riguarda: troverai risposte semplici e come posso aiutarti.' })}
+${testaPagina(b, { briciole: [['Servizi']], occhiello: 'Servizi', titolo: 'Di cosa possiamo <em>parlare insieme.</em>', intro: 'Dal conto corrente alla pianificazione patrimoniale: scegli il tema che ti riguarda.' })}
 
 <section class="sezione">
   <div class="contenitore">
@@ -471,78 +559,32 @@ ${testaPagina(b, { briciole: [['Servizi']], occhiello: 'Servizi', titolo: 'Di co
 /* ------------------------------------------------------------------ */
 /* Servizi: pagine singole                                             */
 /* ------------------------------------------------------------------ */
-const CALCOLATORE = `
-<section class="sezione" id="calcolatore">
-  <div class="contenitore">
-    <div class="testa-sezione compare">
-      <div><p class="occhiello">Calcolatore PAC</p><h2>Prova a fare <em>una simulazione.</em></h2><p class="intro">Inserisci i tuoi valori: il calcolo si aggiorna mentre scrivi.</p></div>
-    </div>
-    <div class="calcolatore compare">
-      <form class="calc-campi" id="calc" novalidate>
-        <div class="calc-campo"><label for="c-iniziale">Capitale iniziale</label><div class="entrata"><input id="c-iniziale" type="number" inputmode="decimal" min="0" step="100" value="1000"><span class="unita">€</span></div></div>
-        <div class="calc-campo"><label for="c-mensile">Versamento mensile</label><div class="entrata"><input id="c-mensile" type="number" inputmode="decimal" min="0" step="10" value="100"><span class="unita">€</span></div></div>
-        <div class="calc-campo"><label for="c-rendimento">Rendimento annuo</label><div class="entrata"><input id="c-rendimento" type="number" inputmode="decimal" min="-20" max="20" step="0.1" value="3"><span class="unita">%</span></div><small>Il valore lo scegli tu: non è una previsione.</small></div>
-        <div class="calc-campo"><label for="c-anni">Durata</label><div class="entrata"><input id="c-anni" type="number" inputmode="numeric" min="1" max="50" step="1" value="20"><span class="unita">anni</span></div></div>
-      </form>
-      <div class="calc-risultati" aria-live="polite">
-        <div class="cifre">
-          <div class="cifra"><small>Capitale versato</small><b id="r-versato">—</b></div>
-          <div class="cifra"><small>Interessi</small><b id="r-interessi">—</b></div>
-          <div class="cifra finale-c"><small>Capitale finale</small><b id="r-finale">—</b></div>
-        </div>
-        <div class="grafico-calc"><svg id="c-grafico" viewBox="0 0 640 280" role="img" aria-label="Grafico: capitale versato e interessi anno per anno"></svg>
-          <div class="legenda"><span><i style="background:#00436C"></i>Capitale versato</span><span><i style="background:#6CADDF"></i>Interessi</span></div>
-        </div>
-        <details class="tabella-anni">
-          <summary>Tabella anno per anno</summary>
-          <div class="scorri-tabella"><table><thead><tr><th scope="col">Anno</th><th scope="col">Capitale versato</th><th scope="col">Interessi</th><th scope="col">Capitale finale</th></tr></thead><tbody id="c-tabella"></tbody></table></div>
-        </details>
-        <p class="nota-calc">Questa è una simulazione basata sul rendimento che hai inserito: non è una previsione né un risultato garantito. Il calcolo considera la capitalizzazione mensile e i versamenti a fine mese; non tiene conto di imposte, costi, inflazione e oscillazioni dei mercati.</p>
-      </div>
-    </div>
-  </div>
-</section>`;
 
-SERVIZI.forEach((s, i) => {
+SERVIZI.forEach((s) => {
+  const intro = Array.isArray(s.intro) ? s.intro : [s.intro];
   generate.push(pagina({
     percorso: `servizi/${s.slug}/`, attiva: s.slug,
     titolo: `${s.nome} · Rachele Stermieri, consulente finanziaria`,
-    descrizione: `${esc(s.titolo)} ${s.intro}`.slice(0, 158),
+    descrizione: `${esc(s.titolo)} ${intro[0]}`.slice(0, 158),
     script: s.calcolatore ? ['calcolatore.js'] : [],
     corpo: b => `
-${testaPagina(b, { briciole: [['Servizi', 'servizi/'], [s.nome]], occhiello: s.nome, titolo: s.titolo, intro: s.intro })}
+${testaPagina(b, { briciole: [['Servizi', 'servizi/'], [s.nome]], occhiello: s.nome, titolo: s.titolo, intro })}
 
 <section class="sezione">
   <div class="contenitore domande-griglia">
     <div class="fisso compare">
       <p class="occhiello">Le tue domande</p>
       <h2>Ti riconosci in <em>queste situazioni?</em></h2>
-      <p>Apri ${s.domande.length > 1 ? 'una domanda' : 'la domanda'}: troverai una risposta semplice e come posso aiutarti.</p>
     </div>
     <div class="domande compare d1">
-      ${s.domande.map((q, k) => `<details class="domanda"${k === 0 ? ' open' : ''}>
+      ${s.domande.map(q => `<details class="domanda">
         <summary>${q.d}<span class="segno" aria-hidden="true"></span></summary>
-        <div class="risposta">
-          <p>${q.r}</p>
-          <div class="aiuto"><b>Come posso aiutarti</b>${q.a}</div>
-          <a href="${b}contatti/" class="collegamento">Approfondiamolo insieme <span aria-hidden="true">→</span></a>
-        </div>
+        <div class="risposta"><p>${q.r}</p>${q.a ? `<p>${q.a}</p>` : ''}</div>
       </details>`).join('\n      ')}
     </div>
   </div>
 </section>
-${s.calcolatore ? CALCOLATORE : ''}
-<section class="sezione sezione-crema aiuto-blocco">
-  <div class="contenitore">
-    <div class="testo compare">
-      <p class="occhiello">Come posso aiutarti</p>
-      <h2>Un aiuto <em>concreto.</em></h2>
-      <p>${s.aiuto}</p>
-      <div class="azioni"><a href="${b}contatti/" class="btn btn-pieno">Parliamone insieme</a><a href="#" data-whatsapp class="collegamento">Scrivimi su WhatsApp <span aria-hidden="true">→</span></a></div>
-    </div>
-    <ol class="passi compare d1">${s.passi.map((p, k) => `<li><span>${k + 1}</span>${p}</li>`).join('')}</ol>
-  </div>
-</section>`,
+${s.interesse ? INTERESSE : ''}${s.calcolatore ? CALCOLATORE : ''}${s.aiutoFinale ? aiutoFinale(b, s.aiutoFinale) : ctaServizio(b)}`,
   }));
 });
 
