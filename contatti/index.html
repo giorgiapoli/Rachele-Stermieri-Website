@@ -47,8 +47,7 @@
           </div>
         </li>
         <li><a href="../approfondimenti/">Approfondimenti</a></li>
-        <li><a href="../contatti/" aria-current="page">Contatti</a></li>
-        <li><a href="../contatti/" class="btn btn-pieno">Inizia a pianificare</a></li>
+        <li><a href="../contatti/" aria-current="page" class="btn btn-pieno">Primo incontro</a></li>
       </ul>
     </nav>
   </div>
@@ -60,7 +59,7 @@
   <div class="contenitore">
     <div><nav class="briciole compare" aria-label="Sei qui"><a href="../">Home</a><span aria-hidden="true">/</span><span>Contatti</span></nav>
       <p class="occhiello compare">Contatti</p>
-      <h1 class="compare d1">Inizia a pianificare <em>il tuo futuro.</em></h1>
+      <h1 class="compare d1">Parliamo dei <em>tuoi progetti.</em></h1>
     </div>
     <p class="intro compare d2">Raccontami in poche righe la tua esigenza: ti ricontatterò per fissare un primo incontro, in ufficio oppure online.</p>
   </div>
@@ -70,7 +69,7 @@
   <div class="contenitore contatti-griglia">
     <div class="compare">
       <p class="occhiello">Recapiti</p>
-      <h2>Parliamone <em>quando vuoi.</em></h2>
+      <h2>Come <em>contattarmi.</em></h2>
       <ul class="recapiti">
         <li><small>Telefono</small><a href="tel:+393492712137">+39 349 271 2137</a></li>
         <li><small>WhatsApp</small><a href="#" data-whatsapp>Scrivimi su WhatsApp</a></li>
@@ -79,7 +78,9 @@
       </ul>
     </div>
     <div class="compare d1">
-      <form class="modulo" id="modulo-contatti" novalidate>
+      <noscript><p>Per richiedere un incontro, usa il telefono o l’email indicati nei recapiti.</p></noscript>
+      <form class="modulo" id="modulo-contatti" hidden aria-labelledby="titolo-modulo">
+        <h2 id="titolo-modulo">Richiedi un incontro</h2>
         <div class="campi">
           <div class="riga">
             <div class="campo"><label for="nome">Nome</label><input id="nome" name="nome" required autocomplete="given-name"></div>
@@ -91,7 +92,9 @@
           </div>
           <div class="campo"><label for="esigenza">Raccontami la tua esigenza</label><textarea id="esigenza" name="esigenza" required placeholder="Ad esempio: vorrei iniziare a risparmiare per l'acquisto di una casa…"></textarea></div>
           <label class="consenso"><input type="checkbox" id="privacy" name="privacy" required> <span>Ho letto l'<a href="../privacy/">informativa privacy</a> e acconsento al trattamento dei miei dati per essere ricontattata/o.</span></label>
-          <button type="submit" class="btn btn-pieno">Inizia a pianificare il tuo futuro</button>
+          <p class="modulo-info" id="modulo-info">Il pulsante prepara un messaggio che potrai inviare da WhatsApp.</p>
+          <button type="submit" class="btn btn-pieno" aria-describedby="modulo-info">Continua su WhatsApp</button>
+          <p class="modulo-info" data-esito-whatsapp role="status"></p>
         </div>
         <div class="esito" role="status"><h3>Grazie!</h3><p>Ho ricevuto la tua richiesta. Ti ricontatterò al più presto.</p></div>
       </form>

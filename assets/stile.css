@@ -500,8 +500,7 @@ h2{font-size:clamp(30px,3.5vw,46px)}
 .fasi-breve li::before{color:#9CC8EA}
 .piede .motto{color:#DCEAF5}
 
-/* =========================================================
-   Homepage dinamica (apertura a tutto schermo)
+/* ==================================================   Homepage dinamica (apertura a tutto schermo)
    ========================================================= */
 .home .testata{position:fixed;left:0;right:0;top:0;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;border-color:transparent;transition:background .4s,border-color .4s}
 .home .testata.scorsa{background:rgba(248,250,252,.94);border-color:var(--linea)}
@@ -604,3 +603,173 @@ body.home.menu-aperto .apri-menu span{background:transparent}
 .scendi{right:auto;left:50%;margin-left:-14px;bottom:28px}
 .home .wa{transition:opacity .4s,transform .4s}
 .home:not(.oltre-eroe) .wa{opacity:0;transform:translateY(12px);pointer-events:none}
+=======
+/* Homepage */
+.home-apertura {
+  background: radial-gradient(ellipse at 80% 45%, #dceaf5 0%, transparent 53%), var(--avorio);
+  border-block: 1px solid var(--linea);
+  padding: clamp(40px, 6vw, 86px) 0;
+}
+.home-apertura-griglia {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, .9fr);
+  gap: clamp(28px, 5.5vw, 78px);
+  align-items: center;
+}
+.home-introduzione h1 {
+  font-size: clamp(52px, 7vw, 100px);
+  line-height: .93;
+  letter-spacing: -.035em;
+}
+.home-introduzione .intro { max-width: 41ch; margin-top: 25px; }
+.home-modalita {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--salvia-scura);
+  font-size: 13px;
+  margin-top: 18px;
+}
+.home-modalita::before {
+  content: "";
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+}
+.home-ritratto {
+  position: relative;
+  margin: 0 auto;
+  width: min(100%, 391px);
+  padding: 10px;
+  border: 1px solid #9db4ca;
+  border-radius: 50% 50% 18px 18px / 39% 39% 18px 18px;
+}
+.home-foto {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: .875;
+  border-radius: inherit;
+  background: #a77754;
+}
+.home-foto img {
+  position: absolute;
+  top: -15%;
+  left: -27%;
+  width: 154%;
+  max-width: none;
+}
+.home-ritratto figcaption {
+  position: absolute;
+  inset: auto 10px 10px;
+  padding: 38px 20px 17px;
+  border-radius: 0 0 13px 13px;
+  background: linear-gradient(transparent, rgba(21, 27, 24, .86));
+  color: #fffaf2;
+}
+.home-ritratto figcaption span {
+  display: block;
+  font: 500 27px/1.1 var(--serif);
+}
+.home-ritratto figcaption small { font-size: 12px; }
+
+.home-servizi { background: #fff; }
+.home-intestazione {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px 28px;
+  flex-wrap: wrap;
+  margin-bottom: 29px;
+}
+.home-intestazione h2, .home-metodo h2, .home-incontro h2 {
+  font-size: clamp(40px, 5vw, 65px);
+  line-height: .98;
+}
+.home-servizi-griglia {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.home-servizio {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d7e5ef;
+  border-radius: 16px;
+  background: #ebf4fa;
+  padding: clamp(20px, 2.5vw, 32px);
+}
+.home-servizio:nth-child(2) { background: #f5f0e8; border-color: #e4ded4; }
+.home-servizio:nth-child(3) { background: #edf1f7; border-color: #dce4ed; }
+.home-servizio h3 { font-size: clamp(28px, 3vw, 36px); }
+.home-servizio p { margin: 10px 0 23px; font-size: 14px; color: #3e5266; }
+.home-servizio ul { list-style: none; margin-top: auto; }
+.home-servizio li { border-top: 1px solid rgba(0, 67, 108, .17); }
+.home-servizio li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  min-height: 47px;
+  padding: 8px 0;
+  color: var(--blu);
+  font-size: 14px;
+  font-weight: 600;
+}
+.home-servizio li a:hover span { text-decoration: underline; text-underline-offset: 4px; }
+.home-servizio li svg { width: 14px; height: 14px; flex: none; }
+
+.home-metodo { background: #00436c; color: var(--avorio); }
+.home-metodo-griglia {
+  display: grid;
+  grid-template-columns: .85fr 1fr;
+  align-items: start;
+  gap: clamp(35px, 7vw, 100px);
+}
+.home-metodo h2, .home-metodo h3, .home-metodo .collegamento { color: var(--avorio); }
+.home-metodo .occhiello, .home-metodo h2 em { color: #c1dff5; }
+.home-metodo .collegamento { margin-top: 26px; }
+.home-metodo :focus-visible { outline-color: #c1dff5; }
+.home-fasi { list-style: none; }
+.home-fasi li {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 14px;
+  padding: 13px 0;
+  border-top: 1px solid rgba(248, 250, 252, .26);
+}
+.home-fasi li:last-child { border-bottom: 1px solid rgba(248, 250, 252, .26); }
+.home-fasi li > span { color: #c1dff5; font-size: 13px; font-variant-numeric: tabular-nums; padding-top: 4px; }
+.home-fasi p { color: #dbe8f3; font-size: 14px; margin-top: 3px; }
+.home-incontro-blocco {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 26px 48px;
+  padding: clamp(25px, 5vw, 57px);
+  background: #e3eff8;
+  border-radius: 18px;
+}
+.home-incontro-blocco p { color: #3e5266; margin-top: 14px; }
+.home-incontro-blocco .btn { flex-shrink: 0; }
+.menu .btn[aria-current="page"] { color: var(--avorio); background: var(--salvia-scura); }
+.modulo[hidden] { display: none; }
+.modulo h2 { margin-bottom: 24px; }
+.modulo-info { font-size: 14px; color: #3e5266; margin-bottom: 12px; }
+.modulo-info[role="status"]:empty { display: none; }
+.modulo-info[role="status"] { margin: 12px 0 0; }
+
+@media (min-width: 1061px) {
+  .tendina::before { content: ""; position: absolute; inset: -16px 0 auto; height: 16px; }
+}
+@media (max-width: 800px) {
+  .home-apertura-griglia, .home-metodo-griglia { grid-template-columns: 1fr; }
+  .home-apertura-griglia { gap: 28px; }
+  .home-ritratto { width: min(100%, 310px); margin-left: 0; }
+  .home-servizi-griglia { grid-template-columns: 1fr; }
+  .home-incontro-blocco { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 440px) {
+  .home-introduzione h1 { font-size: clamp(44px, 12vw, 53px); }
+  .home-introduzione .btn { padding-inline: 16px; }
+}

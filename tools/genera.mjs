@@ -199,7 +199,7 @@ const SERVIZI = [
 /* ------------------------------------------------------------------ */
 /* Pezzi comuni                                                        */
 /* ------------------------------------------------------------------ */
-const freccia = '<svg viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>';
+const freccia = '<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>';
 const icona = '<svg viewBox="0 0 32 32" aria-hidden="true"><use href="#icona-wa"/></svg>';
 const esc = s => s.replace(/<[^>]+>/g, '');
 
@@ -222,8 +222,7 @@ function testata(b, attiva) {
           </div>
         </li>
         <li><a href="${b}approfondimenti/"${corr('approfondimenti')}>Approfondimenti</a></li>
-        <li><a href="${b}contatti/"${corr('contatti')}>Contatti</a></li>
-        <li><a href="${b}contatti/" class="btn btn-pieno">Inizia a pianificare</a></li>
+        <li><a href="${b}contatti/"${corr('contatti')} class="btn btn-pieno">Primo incontro</a></li>
       </ul>
     </nav>
   </div>
@@ -264,7 +263,7 @@ function chiusura(b, titolo = 'I tuoi progetti <em>meritano un piano.</em>', tes
     <h2 class="compare d1">${titolo}</h2>
     <p class="compare d2">${testo}</p>
     <div class="azioni compare d3">
-      <a href="${b}contatti/" class="btn btn-pieno">Inizia a pianificare il tuo futuro</a>
+      <a href="${b}contatti/" class="btn btn-pieno">Richiedi un incontro</a>
       <a href="#" data-whatsapp class="btn btn-linea">${icona}Scrivimi su WhatsApp</a>
     </div>
   </div>
@@ -582,13 +581,13 @@ generate.push(pagina({
   descrizione: 'Contatta Rachele Stermieri, consulente finanziaria: raccontami la tua esigenza e inizia a pianificare il tuo futuro. Incontri in presenza e online.',
   script: ['contatti.js'],
   corpo: b => `
-${testaPagina(b, { briciole: [['Contatti']], occhiello: 'Contatti', titolo: 'Inizia a pianificare <em>il tuo futuro.</em>', intro: 'Raccontami in poche righe la tua esigenza: ti ricontatterò per fissare un primo incontro, in ufficio oppure online.' })}
+${testaPagina(b, { briciole: [['Contatti']], occhiello: 'Contatti', titolo: 'Parliamo dei <em>tuoi progetti.</em>', intro: 'Raccontami in poche righe la tua esigenza: ti ricontatterò per fissare un primo incontro, in ufficio oppure online.' })}
 
 <section class="sezione">
   <div class="contenitore contatti-griglia">
     <div class="compare">
       <p class="occhiello">Recapiti</p>
-      <h2>Parliamone <em>quando vuoi.</em></h2>
+      <h2>Come <em>contattarmi.</em></h2>
       <ul class="recapiti">
         <li><small>Telefono</small><a href="tel:${TELEFONO_LINK}">${TELEFONO}</a></li>
         <li><small>WhatsApp</small><a href="#" data-whatsapp>Scrivimi su WhatsApp</a></li>
@@ -597,7 +596,9 @@ ${testaPagina(b, { briciole: [['Contatti']], occhiello: 'Contatti', titolo: 'Ini
       </ul>
     </div>
     <div class="compare d1">
-      <form class="modulo" id="modulo-contatti" novalidate>
+      <noscript><p>Per richiedere un incontro, usa il telefono o l’email indicati nei recapiti.</p></noscript>
+      <form class="modulo" id="modulo-contatti" hidden aria-labelledby="titolo-modulo">
+        <h2 id="titolo-modulo">Richiedi un incontro</h2>
         <div class="campi">
           <div class="riga">
             <div class="campo"><label for="nome">Nome</label><input id="nome" name="nome" required autocomplete="given-name"></div>
@@ -609,7 +610,9 @@ ${testaPagina(b, { briciole: [['Contatti']], occhiello: 'Contatti', titolo: 'Ini
           </div>
           <div class="campo"><label for="esigenza">Raccontami la tua esigenza</label><textarea id="esigenza" name="esigenza" required placeholder="Ad esempio: vorrei iniziare a risparmiare per l'acquisto di una casa…"></textarea></div>
           <label class="consenso"><input type="checkbox" id="privacy" name="privacy" required> <span>Ho letto l'<a href="${b}privacy/">informativa privacy</a> e acconsento al trattamento dei miei dati per essere ricontattata/o.</span></label>
-          <button type="submit" class="btn btn-pieno">Inizia a pianificare il tuo futuro</button>
+          <p class="modulo-info" id="modulo-info">Il pulsante prepara un messaggio che potrai inviare da WhatsApp.</p>
+          <button type="submit" class="btn btn-pieno" aria-describedby="modulo-info">Continua su WhatsApp</button>
+          <p class="modulo-info" data-esito-whatsapp role="status"></p>
         </div>
         <div class="esito" role="status"><h3>Grazie!</h3><p>Ho ricevuto la tua richiesta. Ti ricontatterò al più presto.</p></div>
       </form>
