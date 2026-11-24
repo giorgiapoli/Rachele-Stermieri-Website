@@ -389,7 +389,7 @@ generate.push(pagina({
 </section>
 
 <section class="banda">
-  <div class="banda-foto" aria-hidden="true"><img src="${b}img/rachele.jpg" alt="" width="440" height="550" loading="lazy"></div>
+  <div class="banda-foto" aria-hidden="true"><img src="${b}img/rachele-posa.jpg" alt="" width="977" height="1610" loading="lazy"></div>
   <div class="contenitore banda-testo">
     <blockquote class="compare">Non esiste un unico percorso. <em>Esiste il tuo.</em></blockquote>
     <div class="azioni compare d1"><a href="${b}metodo/" class="btn btn-chiaro">Il mio metodo</a><a href="${b}chi-sono/" class="collegamento">Chi sono <span aria-hidden="true">→</span></a></div>

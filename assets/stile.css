@@ -778,3 +778,5 @@ body.home.menu-aperto .apri-menu span{background:transparent}
 .eroe-foto img{object-position:50% 18%}
 .arco img{object-position:50% 18%}
 @media (max-width:900px){.eroe-foto{height:64%}.eroe-foto img{object-position:50% 12%}}
+.banda-foto img{object-position:50% 12%}
+@media (max-width:900px){.banda-foto img{object-position:50% 8%}}
