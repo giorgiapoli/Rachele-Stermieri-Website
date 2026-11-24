@@ -11,6 +11,13 @@
 
   var modulo = document.getElementById('modulo-contatti');
   if (modulo) {
+    var bottone = modulo.querySelector('button[type="submit"]');
+    var esitoWhatsApp = modulo.querySelector('[data-esito-whatsapp]');
+    if (INDIRIZZO_MODULO) {
+      bottone.textContent = 'Invia la richiesta';
+      document.getElementById('modulo-info').textContent = 'Ti ricontatterò per concordare il primo incontro.';
+    }
+    modulo.hidden = false;
     modulo.addEventListener('submit', function (e) {
       e.preventDefault();
       var valido = true;
@@ -28,7 +35,6 @@
       };
 
       if (INDIRIZZO_MODULO) {
-        var bottone = modulo.querySelector('button[type="submit"]');
         bottone.disabled = true;
         fetch(INDIRIZZO_MODULO, { method: 'POST', body: dati, headers: { Accept: 'application/json' } })
           .then(function (r) { if (!r.ok) throw new Error(); mostraGrazie(); })
@@ -39,7 +45,7 @@
       var testo = 'Ciao Rachele, sono ' + dati.get('nome') + ' ' + dati.get('cognome') + '.\n\n' + dati.get('esigenza') +
         '\n\nEmail: ' + dati.get('email') + (dati.get('telefono') ? '\nTelefono: ' + dati.get('telefono') : '');
       window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(testo), '_blank', 'noopener');
-      mostraGrazie();
+      esitoWhatsApp.textContent = 'Per completare la richiesta, invia il messaggio in WhatsApp.';
     });
   }
 

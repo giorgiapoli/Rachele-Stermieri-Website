@@ -199,7 +199,7 @@ const SERVIZI = [
 /* ------------------------------------------------------------------ */
 /* Pezzi comuni                                                        */
 /* ------------------------------------------------------------------ */
-const freccia = '<svg viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>';
+const freccia = '<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>';
 const icona = '<svg viewBox="0 0 32 32" aria-hidden="true"><use href="#icona-wa"/></svg>';
 const esc = s => s.replace(/<[^>]+>/g, '');
 
@@ -222,8 +222,7 @@ function testata(b, attiva) {
           </div>
         </li>
         <li><a href="${b}approfondimenti/"${corr('approfondimenti')}>Approfondimenti</a></li>
-        <li><a href="${b}contatti/"${corr('contatti')}>Contatti</a></li>
-        <li><a href="${b}contatti/" class="btn btn-pieno">Inizia a pianificare</a></li>
+        <li><a href="${b}contatti/"${corr('contatti')} class="btn btn-pieno">Primo incontro</a></li>
       </ul>
     </nav>
   </div>
@@ -264,7 +263,7 @@ function chiusura(b, titolo = 'I tuoi progetti <em>meritano un piano.</em>', tes
     <h2 class="compare d1">${titolo}</h2>
     <p class="compare d2">${testo}</p>
     <div class="azioni compare d3">
-      <a href="${b}contatti/" class="btn btn-pieno">Inizia a pianificare il tuo futuro</a>
+      <a href="${b}contatti/" class="btn btn-pieno">Richiedi un incontro</a>
       <a href="#" data-whatsapp class="btn btn-linea">${icona}Scrivimi su WhatsApp</a>
     </div>
   </div>
@@ -354,48 +353,99 @@ const generate = [];
 /* ------------------------------------------------------------------ */
 /* Home                                                                */
 /* ------------------------------------------------------------------ */
+const SERVIZI_HOME = [
+  {
+    titolo: 'Organizzare il denaro',
+    descrizione: 'Per gestire le spese di ogni giorno e dare spazio ai tuoi progetti.',
+    servizi: ['budget', 'conto-corrente', 'piano-di-accumulo'],
+  },
+  {
+    titolo: 'Pensare al futuro',
+    descrizione: 'Per ragionare su investimenti, pensione e patrimonio.',
+    servizi: ['investimenti', 'previdenza', 'grandi-patrimoni'],
+  },
+  {
+    titolo: 'Casa e famiglia',
+    descrizione: 'Per valutare come finanziare un progetto e proteggere chi ti sta a cuore.',
+    servizi: ['mutui', 'prestiti-personali', 'protezione'],
+  },
+];
+
 generate.push(pagina({
   percorso: '',
   titolo: 'Rachele Stermieri · Consulente finanziaria — I tuoi progetti meritano un piano',
   descrizione: 'Rachele Stermieri, consulente finanziaria. Risparmio, investimenti, previdenza, protezione, mutui e pianificazione patrimoniale: un percorso costruito intorno a te, in presenza e online.',
   stato: `\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialService","name":"Rachele Stermieri · Consulente finanziaria","url":"${DOMINIO}/","telephone":"${TELEFONO}","image":"${DOMINIO}/img/rachele-tonda.jpg","areaServed":"IT","slogan":"I tuoi progetti meritano un piano."}</script>`,
   corpo: b => `
-<section class="apertura">
-  <div class="contenitore">
-    <div>
-      <p class="occhiello compare">Consulente finanziaria</p>
-      <h1 class="compare d1">I tuoi progetti <em>meritano un piano.</em></h1>
-      <p class="intro compare d2">Ti accompagno nelle scelte che riguardano il tuo denaro, con ascolto, chiarezza e una visione di lungo periodo. In presenza oppure online.</p>
-      <div class="azioni compare d3">
-        <a href="${b}contatti/" class="btn btn-pieno">Inizia a pianificare il tuo futuro</a>
-        <a href="${b}chi-sono/" class="collegamento">Chi sono <span aria-hidden="true">→</span></a>
+<section class="home-apertura" aria-labelledby="titolo-home">
+  <div class="contenitore home-apertura-griglia">
+    <div class="home-introduzione">
+      <p class="occhiello">Consulenza finanziaria</p>
+      <h1 id="titolo-home">I tuoi progetti<br><em>meritano un piano.</em></h1>
+      <p class="intro">Sono Rachele Stermieri. Ti aiuto a mettere ordine nelle tue scelte finanziarie, dal risparmio di ogni giorno ai progetti di lungo periodo.</p>
+      <div class="azioni">
+        <a href="${b}contatti/" class="btn btn-pieno">Richiedi un incontro ${freccia}</a>
+        <a href="${b}chi-sono/" class="collegamento">Conosciamoci <span aria-hidden="true">→</span></a>
       </div>
+      <p class="home-modalita">In presenza o online</p>
     </div>
-    <figure class="ritratto compare d2">
-      <span class="alone" aria-hidden="true"></span><span class="anello" aria-hidden="true"></span>
-      <img src="${b}img/rachele-tonda.jpg" alt="Ritratto di Rachele Stermieri" width="900" height="900" fetchpriority="high">
+    <figure class="home-ritratto">
+      <div class="home-foto">
+        <img src="${b}img/rachele-tonda.jpg" alt="Ritratto di Rachele Stermieri" width="900" height="900" fetchpriority="high">
+      </div>
+      <figcaption>
+        <span>Rachele Stermieri</span>
+        <small>Banker Consultant · Banca Mediolanum</small>
+      </figcaption>
     </figure>
   </div>
 </section>
 
-<section class="sezione sezione-crema">
+<section class="sezione home-servizi" aria-labelledby="titolo-servizi">
   <div class="contenitore">
-    <div class="compare"><p class="occhiello">Servizi</p><h2>Di cosa possiamo <em>parlare insieme.</em></h2></div>
-    <ul class="elenco-servizi compare d1">
-      ${SERVIZI.map(s => `<li><a href="${b}servizi/${s.slug}/"><span>${s.nome}</span>${freccia}</a></li>`).join('\n      ')}
-    </ul>
+    <div class="home-intestazione">
+      <div>
+        <p class="occhiello">Servizi</p>
+        <h2 id="titolo-servizi">Da dove vuoi <em>partire?</em></h2>
+      </div>
+      <a href="${b}servizi/" class="collegamento">Tutti i servizi <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="home-servizi-griglia">
+      ${SERVIZI_HOME.map(({ titolo, descrizione, servizi }) => `<article class="home-servizio">
+        <h3>${titolo}</h3>
+        <p>${descrizione}</p>
+        <ul>
+          ${servizi.map(slug => {
+            const { nome } = SERVIZI.find(s => s.slug === slug);
+            return `<li><a href="${b}servizi/${slug}/"><span>${nome}</span>${freccia}</a></li>`;
+          }).join('\n          ')}
+        </ul>
+      </article>`).join('\n      ')}
+    </div>
   </div>
 </section>
 
-<section class="fascia-blu">
-  <div class="contenitore">
-    <div class="compare">
-      <blockquote>Prima di parlare di numeri, <em>ascolto le persone.</em></blockquote>
-      <ol class="fasi-breve">${FASI.map(([t]) => `<li>${t}</li>`).join('')}</ol>
+<section class="sezione home-metodo" aria-labelledby="titolo-metodo">
+  <div class="contenitore home-metodo-griglia">
+    <div>
+      <p class="occhiello">Il mio metodo</p>
+      <h2 id="titolo-metodo">Prima dei numeri, <em>ascolto le persone.</em></h2>
+      <a href="${b}metodo/" class="collegamento">Come lavoro <span aria-hidden="true">→</span></a>
     </div>
-    <div class="compare d1">
-      <p>${FRASE_METODO.replace(/[«»]/g, '')}</p>
-      <div class="azioni"><a href="${b}contatti/" class="btn btn-chiaro">Inizia a pianificare il tuo futuro</a><a href="${b}metodo/" class="collegamento">Il mio metodo <span aria-hidden="true">→</span></a></div>
+    <ol class="home-fasi" role="list">
+      ${FASI.map(([titolo, descrizione], i) => `<li><span aria-hidden="true">0${i + 1}</span><div><h3>${titolo}</h3><p>${descrizione}</p></div></li>`).join('\n      ')}
+    </ol>
+  </div>
+</section>
+
+<section class="sezione home-incontro" aria-labelledby="titolo-incontro">
+  <div class="contenitore">
+    <div class="home-incontro-blocco">
+      <div>
+        <h2 id="titolo-incontro">Cominciamo con <em>una conversazione.</em></h2>
+        <p>Raccontami cosa hai in mente. Ci accordiamo per incontrarci in presenza oppure online.</p>
+      </div>
+      <a href="${b}contatti/" class="btn btn-pieno">Richiedi un incontro ${freccia}</a>
     </div>
   </div>
 </section>`,
@@ -585,13 +635,13 @@ generate.push(pagina({
   descrizione: 'Contatta Rachele Stermieri, consulente finanziaria: raccontami la tua esigenza e inizia a pianificare il tuo futuro. Incontri in presenza e online.',
   script: ['contatti.js'],
   corpo: b => `
-${testaPagina(b, { briciole: [['Contatti']], occhiello: 'Contatti', titolo: 'Inizia a pianificare <em>il tuo futuro.</em>', intro: 'Raccontami in poche righe la tua esigenza: ti ricontatterò per fissare un primo incontro, in ufficio oppure online.' })}
+${testaPagina(b, { briciole: [['Contatti']], occhiello: 'Contatti', titolo: 'Parliamo dei <em>tuoi progetti.</em>', intro: 'Raccontami in poche righe la tua esigenza: ti ricontatterò per fissare un primo incontro, in ufficio oppure online.' })}
 
 <section class="sezione">
   <div class="contenitore contatti-griglia">
     <div class="compare">
       <p class="occhiello">Recapiti</p>
-      <h2>Parliamone <em>quando vuoi.</em></h2>
+      <h2>Come <em>contattarmi.</em></h2>
       <ul class="recapiti">
         <li><small>Telefono</small><a href="tel:${TELEFONO_LINK}">${TELEFONO}</a></li>
         <li><small>WhatsApp</small><a href="#" data-whatsapp>Scrivimi su WhatsApp</a></li>
@@ -600,7 +650,9 @@ ${testaPagina(b, { briciole: [['Contatti']], occhiello: 'Contatti', titolo: 'Ini
       </ul>
     </div>
     <div class="compare d1">
-      <form class="modulo" id="modulo-contatti" novalidate>
+      <noscript><p>Per richiedere un incontro, usa il telefono o l’email indicati nei recapiti.</p></noscript>
+      <form class="modulo" id="modulo-contatti" hidden aria-labelledby="titolo-modulo">
+        <h2 id="titolo-modulo">Richiedi un incontro</h2>
         <div class="campi">
           <div class="riga">
             <div class="campo"><label for="nome">Nome</label><input id="nome" name="nome" required autocomplete="given-name"></div>
@@ -612,7 +664,9 @@ ${testaPagina(b, { briciole: [['Contatti']], occhiello: 'Contatti', titolo: 'Ini
           </div>
           <div class="campo"><label for="esigenza">Raccontami la tua esigenza</label><textarea id="esigenza" name="esigenza" required placeholder="Ad esempio: vorrei iniziare a risparmiare per l'acquisto di una casa…"></textarea></div>
           <label class="consenso"><input type="checkbox" id="privacy" name="privacy" required> <span>Ho letto l'<a href="${b}privacy/">informativa privacy</a> e acconsento al trattamento dei miei dati per essere ricontattata/o.</span></label>
-          <button type="submit" class="btn btn-pieno">Inizia a pianificare il tuo futuro</button>
+          <p class="modulo-info" id="modulo-info">Il pulsante prepara un messaggio che potrai inviare da WhatsApp.</p>
+          <button type="submit" class="btn btn-pieno" aria-describedby="modulo-info">Continua su WhatsApp</button>
+          <p class="modulo-info" data-esito-whatsapp role="status"></p>
         </div>
         <div class="esito" role="status"><h3>Grazie!</h3><p>Ho ricevuto la tua richiesta. Ti ricontatterò al più presto.</p></div>
       </form>
