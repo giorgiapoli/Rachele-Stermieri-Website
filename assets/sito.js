@@ -21,11 +21,26 @@
   var bottone = document.querySelector('.apri-menu');
   var menu = document.querySelector('.menu');
   if (bottone && menu) {
-    bottone.addEventListener('click', function () {
-      var aperto = menu.classList.toggle('aperto');
+    function impostaMenu(aperto) {
+      menu.classList.toggle('aperto', aperto);
       document.body.classList.toggle('menu-aperto', aperto);
       bottone.setAttribute('aria-expanded', aperto);
+      bottone.setAttribute('aria-label', aperto ? 'Chiudi il menu' : 'Apri il menu');
+    }
+
+    bottone.addEventListener('click', function () {
+      impostaMenu(!menu.classList.contains('aperto'));
     });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menu.classList.contains('aperto') && !menu.querySelector('.con-tendina.aperto')) {
+        impostaMenu(false);
+        bottone.focus();
+      }
+    });
+    var schermoAmpio = window.matchMedia('(min-width: 1061px)');
+    function alCambioSchermo(e) { if (e.matches) impostaMenu(false); }
+    if (schermoAmpio.addEventListener) schermoAmpio.addEventListener('change', alCambioSchermo);
+    else schermoAmpio.addListener(alCambioSchermo);
   }
 
   /* Tendina "Servizi" */
@@ -37,7 +52,7 @@
     voce.addEventListener('mouseenter', function () { if (ampio.matches) imposta(true); });
     voce.addEventListener('mouseleave', function () { if (ampio.matches) imposta(false); });
     document.addEventListener('click', function (e) { if (ampio.matches && !voce.contains(e.target)) imposta(false); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { imposta(false); b.focus(); } });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && voce.classList.contains('aperto')) { imposta(false); b.focus(); } });
   });
 
   /* Comparsa delicata degli elementi */

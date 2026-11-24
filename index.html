@@ -48,8 +48,7 @@
           </div>
         </li>
         <li><a href="./approfondimenti/">Approfondimenti</a></li>
-        <li><a href="./contatti/">Contatti</a></li>
-        <li><a href="./contatti/" class="btn btn-pieno">Inizia a pianificare</a></li>
+        <li><a href="./contatti/" class="btn btn-pieno">Primo incontro</a></li>
       </ul>
     </nav>
   </div>
@@ -57,50 +56,95 @@
 
 <main id="contenuto">
 
-<section class="apertura">
-  <div class="contenitore">
-    <div>
-      <p class="occhiello compare">Consulente finanziaria</p>
-      <h1 class="compare d1">I tuoi progetti <em>meritano un piano.</em></h1>
-      <p class="intro compare d2">Ti accompagno nelle scelte che riguardano il tuo denaro, con ascolto, chiarezza e una visione di lungo periodo. In presenza oppure online.</p>
-      <div class="azioni compare d3">
-        <a href="./contatti/" class="btn btn-pieno">Inizia a pianificare il tuo futuro</a>
-        <a href="./chi-sono/" class="collegamento">Chi sono <span aria-hidden="true">→</span></a>
+<section class="home-apertura" aria-labelledby="titolo-home">
+  <div class="contenitore home-apertura-griglia">
+    <div class="home-introduzione">
+      <p class="occhiello">Consulenza finanziaria</p>
+      <h1 id="titolo-home">I tuoi progetti<br><em>meritano un piano.</em></h1>
+      <p class="intro">Sono Rachele Stermieri. Ti aiuto a mettere ordine nelle tue scelte finanziarie, dal risparmio di ogni giorno ai progetti di lungo periodo.</p>
+      <div class="azioni">
+        <a href="./contatti/" class="btn btn-pieno">Richiedi un incontro <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+        <a href="./chi-sono/" class="collegamento">Conosciamoci <span aria-hidden="true">→</span></a>
       </div>
+      <p class="home-modalita">In presenza o online</p>
     </div>
-    <figure class="ritratto compare d2">
-      <span class="alone" aria-hidden="true"></span><span class="anello" aria-hidden="true"></span>
-      <img src="./img/rachele-tonda.jpg" alt="Ritratto di Rachele Stermieri" width="900" height="900" fetchpriority="high">
+    <figure class="home-ritratto">
+      <div class="home-foto">
+        <img src="./img/rachele-tonda.jpg" alt="Ritratto di Rachele Stermieri" width="900" height="900" fetchpriority="high">
+      </div>
+      <figcaption>
+        <span>Rachele Stermieri</span>
+        <small>Banker Consultant · Banca Mediolanum</small>
+      </figcaption>
     </figure>
   </div>
 </section>
 
-<section class="sezione sezione-crema">
+<section class="sezione home-servizi" aria-labelledby="titolo-servizi">
   <div class="contenitore">
-    <div class="compare"><p class="occhiello">Servizi</p><h2>Di cosa possiamo <em>parlare insieme.</em></h2></div>
-    <ul class="elenco-servizi compare d1">
-      <li><a href="./servizi/conto-corrente/"><span>Conto corrente</span><svg viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
-      <li><a href="./servizi/piano-di-accumulo/"><span>Piano di accumulo</span><svg viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
-      <li><a href="./servizi/investimenti/"><span>Investimenti</span><svg viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
-      <li><a href="./servizi/previdenza/"><span>Previdenza</span><svg viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
-      <li><a href="./servizi/protezione/"><span>Protezione</span><svg viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
-      <li><a href="./servizi/mutui/"><span>Mutui</span><svg viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
-      <li><a href="./servizi/prestiti-personali/"><span>Prestiti personali</span><svg viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
-      <li><a href="./servizi/grandi-patrimoni/"><span>Grandi patrimoni</span><svg viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
-      <li><a href="./servizi/budget/"><span>Budget e gestione del denaro</span><svg viewBox="0 0 14 14"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
-    </ul>
+    <div class="home-intestazione">
+      <div>
+        <p class="occhiello">Servizi</p>
+        <h2 id="titolo-servizi">Da dove vuoi <em>partire?</em></h2>
+      </div>
+      <a href="./servizi/" class="collegamento">Tutti i servizi <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="home-servizi-griglia">
+      <article class="home-servizio">
+        <h3>Organizzare il denaro</h3>
+        <p>Per gestire le spese di ogni giorno e dare spazio ai tuoi progetti.</p>
+        <ul>
+          <li><a href="./servizi/budget/"><span>Budget e gestione del denaro</span><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+          <li><a href="./servizi/conto-corrente/"><span>Conto corrente</span><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+          <li><a href="./servizi/piano-di-accumulo/"><span>Piano di accumulo</span><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+        </ul>
+      </article>
+      <article class="home-servizio">
+        <h3>Pensare al futuro</h3>
+        <p>Per ragionare su investimenti, pensione e patrimonio.</p>
+        <ul>
+          <li><a href="./servizi/investimenti/"><span>Investimenti</span><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+          <li><a href="./servizi/previdenza/"><span>Previdenza</span><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+          <li><a href="./servizi/grandi-patrimoni/"><span>Grandi patrimoni</span><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+        </ul>
+      </article>
+      <article class="home-servizio">
+        <h3>Casa e famiglia</h3>
+        <p>Per valutare come finanziare un progetto e proteggere chi ti sta a cuore.</p>
+        <ul>
+          <li><a href="./servizi/mutui/"><span>Mutui</span><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+          <li><a href="./servizi/prestiti-personali/"><span>Prestiti personali</span><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+          <li><a href="./servizi/protezione/"><span>Protezione</span><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
+        </ul>
+      </article>
+    </div>
   </div>
 </section>
 
-<section class="fascia-blu">
-  <div class="contenitore">
-    <div class="compare">
-      <blockquote>Prima di parlare di numeri, <em>ascolto le persone.</em></blockquote>
-      <ol class="fasi-breve"><li>Ascolto</li><li>Analisi</li><li>Pianificazione</li><li>Accompagnamento</li></ol>
+<section class="sezione home-metodo" aria-labelledby="titolo-metodo">
+  <div class="contenitore home-metodo-griglia">
+    <div>
+      <p class="occhiello">Il mio metodo</p>
+      <h2 id="titolo-metodo">Prima dei numeri, <em>ascolto le persone.</em></h2>
+      <a href="./metodo/" class="collegamento">Come lavoro <span aria-hidden="true">→</span></a>
     </div>
-    <div class="compare d1">
-      <p>Non esiste un unico percorso valido per tutti. Esiste un percorso da costruire intorno a ogni persona.</p>
-      <div class="azioni"><a href="./contatti/" class="btn btn-chiaro">Inizia a pianificare il tuo futuro</a><a href="./metodo/" class="collegamento">Il mio metodo <span aria-hidden="true">→</span></a></div>
+    <ol class="home-fasi" role="list">
+      <li><span aria-hidden="true">01</span><div><h3>Ascolto</h3><p>Conoscere la persona, la sua storia e i suoi progetti.</p></div></li>
+      <li><span aria-hidden="true">02</span><div><h3>Analisi</h3><p>Comprendere la situazione economica e patrimoniale, le risorse e le priorità.</p></div></li>
+      <li><span aria-hidden="true">03</span><div><h3>Pianificazione</h3><p>Costruire un percorso coerente con le tue esigenze, le tue possibilità e il tuo profilo di rischio.</p></div></li>
+      <li><span aria-hidden="true">04</span><div><h3>Accompagnamento</h3><p>Seguirti nel tempo, attraverso il dialogo e verifiche periodiche.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sezione home-incontro" aria-labelledby="titolo-incontro">
+  <div class="contenitore">
+    <div class="home-incontro-blocco">
+      <div>
+        <h2 id="titolo-incontro">Cominciamo con <em>una conversazione.</em></h2>
+        <p>Raccontami cosa hai in mente. Ci accordiamo per incontrarci in presenza oppure online.</p>
+      </div>
+      <a href="./contatti/" class="btn btn-pieno">Richiedi un incontro <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
     </div>
   </div>
 </section>
