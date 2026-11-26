@@ -906,3 +906,30 @@ body.home.menu-aperto .apri-menu span{background:transparent}
   .tab-esempio thead th{font-size:9.5px}
 }
 .risposta p+p{margin-top:10px}
+
+/* =========================================================
+   Calcolatore: la tabella anno per anno non deve allargare il riquadro
+   ========================================================= */
+.calcolatore{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}
+.calc-campi,.calc-risultati{min-width:0}
+.scorri-tabella{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}
+@media (max-width:1060px){.calcolatore{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){
+  .scorri-tabella{max-height:320px}
+  .scorri-tabella table{table-layout:fixed;width:100%;font-size:13px}
+  .scorri-tabella th,.scorri-tabella td{padding:10px 5px;white-space:nowrap}
+  .scorri-tabella thead th{white-space:normal;font-size:10.5px;line-height:1.3;vertical-align:bottom}
+  .scorri-tabella th:nth-child(1){width:13%;padding-left:10px}
+  .scorri-tabella th:nth-child(2),.scorri-tabella th:nth-child(3),.scorri-tabella th:nth-child(4){width:29%}
+  .scorri-tabella th:last-child,.scorri-tabella td:last-child{padding-right:10px}
+  .scorri-tabella td:first-child{padding-left:10px}
+  .tabella-anni summary{padding:14px 0}
+}
+@media (max-width:360px){
+  .scorri-tabella table{font-size:12px}
+  .scorri-tabella th,.scorri-tabella td{padding:9px 3px}
+  .scorri-tabella th:nth-child(1){width:14%;padding-left:8px}
+  .scorri-tabella th:last-child,.scorri-tabella td:last-child{padding-right:8px}
+  .scorri-tabella td:first-child{padding-left:8px}
+  .scorri-tabella thead th{font-size:9.5px}
+}
