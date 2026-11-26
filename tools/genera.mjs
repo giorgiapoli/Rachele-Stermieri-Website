@@ -33,11 +33,11 @@ const SERVIZI = [
       { d: 'Cos\'è un piano di accumulo?',
         r: 'Un piano di accumulo è un modo semplice e graduale per investire i propri risparmi nel tempo. Ti permette di accantonare e investire automaticamente una somma ogni mese, anche piccola. Così il risparmio diventa un\'abitudine.' },
       { d: 'Posso iniziare con 50-100 euro al mese?',
-        r: 'Sì. Un piano di accumulo si può iniziare anche con importi contenuti, in base agli strumenti disponibili: più dell\'importo, conta la costanza nel tempo. Possiamo individuare insieme una rata sostenibile rispetto alle tue entrate e alle tue spese.' },
+        r: 'Sì. Un piano di accumulo si può iniziare anche con importi contenuti: più dell\'importo, conta la costanza nel tempo.' },
       { d: 'Posso modificare l\'importo dei versamenti?',
-        r: 'Sì, di norma è possibile aumentare o ridurre la rata in base alle tue esigenze, secondo le condizioni dello strumento scelto. Il piano può cambiare insieme alla tua vita.' },
+        r: 'Sì, puoi aumentare o ridurre la rata in base alle tue esigenze. Il piano può cambiare insieme alla tua vita.' },
       { d: 'Posso sospendere temporaneamente i versamenti?',
-        r: 'Sì, in genere i versamenti possono essere sospesi per un periodo e ripresi in un secondo momento, secondo le condizioni dello strumento scelto.' },
+        r: 'Sì, i versamenti possono essere sospesi per un periodo e ripresi in un secondo momento.' },
       { d: 'Posso creare un piano di accumulo per mio figlio?',
         r: 'Sì, certamente. È un bellissimo progetto. Un piano di accumulo può essere uno strumento da valutare per costruire nel tempo una risorsa da destinare al futuro di tuo figlio. Possiamo individuare insieme un percorso coerente con le tue esigenze e i tuoi obiettivi.' },
       { d: 'È meglio iniziare con una piccola cifra oppure aspettare di avere più capitale?',
@@ -60,7 +60,7 @@ const SERVIZI = [
       { d: 'Meglio lasciare i soldi sul conto o investirli?',
         r: 'Dipende dai tuoi obiettivi e dai tempi. Una parte di liquidità sul conto è utile per le spese quotidiane e gli imprevisti; il denaro che non serve nel breve periodo può invece essere valutato per un investimento, coerente con il tuo profilo e con il tempo che hai davanti. Insieme cerchiamo l\'equilibrio giusto per te.' },
       { d: 'Quanto denaro serve per iniziare a investire?',
-        r: 'Non esiste una cifra uguale per tutti: si può iniziare anche con importi contenuti, ad esempio attraverso un piano di accumulo. Conta partire da una somma coerente con le tue possibilità e con i tuoi obiettivi.' },
+        r: 'Non esiste una cifra uguale per tutti: si può iniziare anche con importi contenuti. Conta partire da una somma coerente con le tue possibilità e con i tuoi obiettivi.' },
     ],
     aiutoFinale: 'Affrontiamo tutte le tue domande insieme. Non è nulla di così complicato, basta solo partire.',
   },
@@ -75,16 +75,14 @@ const SERVIZI = [
       { d: 'Quando dovrei iniziare a pensare alla pensione?',
         r: 'Il prima possibile. Anche nella pianificazione previdenziale il tempo è uno dei nostri alleati più importanti. Iniziare a pensarci per tempo permette di valutare le diverse possibilità e costruire un percorso più consapevole.' },
       { d: 'Il mio TFR è investito nel modo giusto per me?',
-        r: 'Lasciare il TFR in azienda oppure destinarlo a un fondo pensione comporta caratteristiche, benefici e condizioni diverse, e non esiste una scelta uguale per tutti: dipende dalla tua situazione, dai tuoi obiettivi e dal tempo che hai davanti. Possiamo valutarle insieme.' },
+        r: 'Lasciare il TFR in azienda oppure destinarlo a un fondo pensione comporta benefici e condizioni diverse. Scopriamo insieme quali.' },
       { d: 'Sto sfruttando la deducibilità dei versamenti?',
-        r: 'I versamenti a una forma di previdenza complementare si possono dedurre dal reddito fino a 5.164,57 euro l\'anno. È un vantaggio fiscale che spesso non viene sfruttato del tutto.',
+        r: 'I versamenti a una forma di previdenza complementare si possono dedurre dal reddito fino a 5.300 euro all\'anno. È un vantaggio fiscale che spesso non viene sfruttato del tutto.',
         a: 'Guardiamo insieme quanto stai già versando e valutiamo se ha senso fare di più.' },
       { d: 'Sai quando andrai in pensione?',
-        r: 'Per molte persone la data della pensione è ancora un\'incognita. Conoscerla è il primo passo per pianificare con serenità.',
-        a: 'Partendo dalla tua situazione contributiva, facciamo insieme una stima di quando potrai andare in pensione.' },
+        r: 'Calcoliamo insieme quando andrai in pensione.' },
       { d: 'Sai con quanto potrai andare in pensione?',
-        r: 'La pensione può essere più bassa dell\'ultimo stipendio. Conoscere in anticipo la differenza permette di organizzarsi per tempo.',
-        a: 'Stimiamo insieme l\'importo della tua pensione e, se serve, valutiamo come integrarla.' },
+        r: 'La pensione è molto più bassa dell\'ultimo stipendio percepito. Conoscere in anticipo la differenza permette di organizzarsi nel tempo.' },
     ],
   },
   {
@@ -93,8 +91,7 @@ const SERVIZI = [
     intro: 'Gli imprevisti non si possono evitare. Ci si può però preparare, per proteggere le persone che ami e ciò che hai costruito.',
     domande: [
       { d: 'Come posso proteggere economicamente la mia famiglia?',
-        r: 'Pensare a cosa succederebbe ai tuoi cari se venisse a mancare il tuo reddito non è piacevole, ma è un gesto di responsabilità e di cura.',
-        a: 'Valutiamo insieme le esigenze della tua famiglia e le soluzioni di protezione disponibili, per scegliere quella più adatta.' },
+        r: 'Pensare a cosa potrebbe accadere ai tuoi cari se venisse a mancare il tuo sostegno economico non è piacevole, ma proteggersi oggi per evitare che domani debbano affrontare anche difficoltà economiche è un gesto concreto di responsabilità, attenzione, amore verso chi ti sta vicino.' },
       { d: 'Cosa succede se non posso più lavorare?',
         r: 'Un infortunio o una malattia possono ridurre o interrompere il reddito, anche per lungo tempo. È un rischio spesso sottovalutato.',
         a: 'Analizziamo quanto sei già coperto e valutiamo le soluzioni che possono proteggere il tuo reddito e il tuo tenore di vita.' },
@@ -105,12 +102,13 @@ const SERVIZI = [
         r: 'Danni alla casa, responsabilità verso altre persone o eventi inattesi possono incidere sul patrimonio costruito con fatica.',
         a: 'Individuiamo insieme i rischi principali e valutiamo le soluzioni per proteggere ciò che hai costruito.' },
     ],
+    aiutoFinale: 'Individuiamo insieme gli aspetti della tua vita, della tua famiglia, che meritano maggiore protezione, per capire cosa è importante tutelare e come farlo nel modo più adeguato.',
     aiuto: 'Proteggersi bene significa sapere da cosa, quanto e per chi. Lo capiamo insieme, senza coperture inutili.',
     passi: ['Valutiamo le tue esigenze di protezione', 'Verifichiamo le coperture che hai già', 'Scegliamo le soluzioni più adatte'],
   },
   {
     slug: 'mutui', nome: 'Mutui', breve: 'La casa dei tuoi progetti merita una pianificazione attenta.',
-    titolo: 'La casa dei tuoi progetti merita <em>una pianificazione attenta.</em>',
+    titolo: 'Vorrei comprare casa, una scelta importante, <em>affrontiamola insieme.</em>',
     intro: 'Un mutuo ti accompagna per molti anni. Sceglierlo con attenzione significa vivere la tua casa con più serenità.',
     domande: [
       { d: 'Quanto posso permettermi di spendere per acquistare casa?',
@@ -122,13 +120,8 @@ const SERVIZI = [
       { d: 'Il mio mutuo attuale si può migliorare con una surroga?',
         r: 'La surroga permette di trasferire il mutuo a un\'altra banca, senza costi per te, per ottenere condizioni migliori se nel frattempo il mercato è cambiato.',
         a: 'Analizziamo il tuo mutuo attuale e valutiamo insieme se una surroga può migliorarne le condizioni.' },
-      { d: 'Quale rata posso sostenere senza rinunciare ai miei progetti?',
-        r: 'Una rata sostenibile sulla carta può diventare pesante se toglie spazio ai risparmi, agli imprevisti e ai progetti futuri.',
-        a: 'Costruiamo insieme un piano che tenga conto della casa e di tutto il resto: famiglia, risparmio, tempo libero.' },
-      { d: 'Meglio tasso fisso o variabile nella mia situazione?',
-        r: 'Il tasso fisso offre una rata costante e prevedibile; il variabile segue l\'andamento dei tassi di mercato e può salire o scendere. Non esiste una scelta giusta per tutti.',
-        a: 'Valutiamo insieme la durata del mutuo, la tua tranquillità rispetto alle variazioni della rata e i tuoi progetti, per capire quale soluzione è più adatta a te.' },
     ],
+    aiutoFinale: 'Calcoliamo la rata più adatta a te.',
     aiuto: 'Prima di scegliere il mutuo, scegliamo la rata giusta per la tua vita.',
     passi: ['Definiamo un budget realistico', 'Valutiamo rata, durata e tasso', 'Verifichiamo se migliorare il mutuo attuale'],
   },
@@ -141,7 +134,7 @@ const SERVIZI = [
         r: 'Una rata va considerata insieme a tutte le altre spese: casa, famiglia, imprevisti. Solo così si capisce se è davvero sostenibile.',
         a: 'Analizziamo insieme entrate e uscite per capire quale rata puoi sostenere con serenità.' },
       { d: 'È meglio utilizzare i risparmi o chiedere un finanziamento?',
-        r: 'Dipende dall\'importo, dai tuoi risparmi e da quanta liquidità è bene tenere da parte per gli imprevisti. A volte conviene usare i risparmi, a volte no.',
+        r: 'Dipende dall\'importo, dai tuoi risparmi e da quanta liquidità è bene tenere da parte per gli imprevisti.',
         a: 'Confrontiamo insieme le due possibilità, valutando costi, tempi e impatto sui tuoi progetti.' },
     ],
     aiuto: 'L\'obiettivo è realizzare il tuo progetto senza mettere in difficoltà tutto il resto.',
@@ -150,7 +143,7 @@ const SERVIZI = [
   {
     slug: 'grandi-patrimoni', nome: 'Grandi patrimoni', breve: 'Una visione d\'insieme per valorizzare il patrimonio.',
     titolo: 'Una visione d\'insieme per valorizzare <em>e pianificare il patrimonio.</em>',
-    intro: 'Quando il patrimonio cresce, cresce anche la complessità. Una pianificazione completa ti aiuta a dare ordine, coerenza e continuità a ciò che hai costruito.',
+    intro: 'Valorizzare ciò che hai costruito richiede competenza, visione e una strategia che tenga conto di ogni aspetto patrimoniale.',
     domande: [
       { d: 'Come posso organizzare meglio il mio patrimonio?',
         r: 'Conti, investimenti, immobili, partecipazioni: senza una visione d\'insieme è facile perdere coerenza tra le diverse parti del patrimonio.',
@@ -161,12 +154,6 @@ const SERVIZI = [
       { d: 'Come posso tutelare il patrimonio familiare?',
         r: 'Un patrimonio familiare va protetto dagli imprevisti e dai rischi che possono metterlo in difficoltà.',
         a: 'Individuiamo insieme i rischi principali e le soluzioni più adatte per tutelarlo.' },
-      { d: 'Come posso coordinare il patrimonio personale e aziendale?',
-        r: 'Per chi ha un\'impresa, patrimonio personale e aziendale sono spesso legati. Gestirli separatamente può far perdere opportunità o creare rischi.',
-        a: 'Analizziamo insieme i due ambiti per costruire una strategia coerente.' },
-      { d: 'Come posso avere una visione complessiva dei miei investimenti?',
-        r: 'Investimenti distribuiti su più banche e strumenti diversi rendono difficile capire come stanno andando davvero le cose.',
-        a: 'Costruiamo insieme una visione unica e chiara dei tuoi investimenti, da rivedere periodicamente.' },
     ],
     aiuto: 'Una pianificazione patrimoniale completa mette in relazione ogni parte del patrimonio, oggi e per chi verrà dopo.',
     passi: ['Ricostruiamo una visione d\'insieme', 'Pianifichiamo tutela e continuità', 'Coordiniamo patrimonio personale e aziendale'],
@@ -177,8 +164,7 @@ const SERVIZI = [
     intro: 'Sapere quanto entra, quanto esce e quanto puoi mettere da parte ti dà libertà di scelta. Da qui nasce ogni progetto.',
     domande: [
       { d: 'Dove finiscono i miei soldi ogni mese?',
-        r: 'Molte spese sono piccole e quotidiane: prese una per una sembrano poca cosa, sommate fanno la differenza.',
-        a: 'Ricostruiamo insieme entrate e uscite del mese, così da vedere con chiarezza dove vanno i tuoi soldi.' },
+        r: 'Ricostruiamo insieme entrate e uscite del mese, così da vedere con chiarezza dove vanno i tuoi soldi.' },
       { d: 'Quanto dovrei mettere da parte?',
         r: 'Non esiste una cifra uguale per tutti: dipende dal reddito, dalle spese e dai tuoi obiettivi.',
         a: 'Definiamo insieme una quota di risparmio sostenibile e coerente con i tuoi progetti.' },
@@ -357,9 +343,9 @@ const CALCOLATORE = `
     </div>
     <div class="calcolatore compare">
       <form class="calc-campi" id="calc" novalidate>
-        <div class="calc-campo"><label for="c-iniziale">Capitale iniziale</label><div class="entrata"><input id="c-iniziale" type="number" inputmode="decimal" min="0" step="100" value="1000"><span class="unita">€</span></div></div>
-        <div class="calc-campo"><label for="c-mensile">Versamento mensile</label><div class="entrata"><input id="c-mensile" type="number" inputmode="decimal" min="0" step="10" value="100"><span class="unita">€</span></div></div>
-        <div class="calc-campo"><label for="c-rendimento">Rendimento annuo</label><div class="entrata"><input id="c-rendimento" type="number" inputmode="decimal" min="-20" max="20" step="0.1" value="3"><span class="unita">%</span></div><small>Il valore lo scegli tu: non è una previsione.</small></div>
+        <div class="calc-campo"><label for="c-iniziale">Capitale iniziale</label><div class="entrata"><input id="c-iniziale" type="number" inputmode="decimal" min="0" step="100" value="1800"><span class="unita">€</span></div></div>
+        <div class="calc-campo"><label for="c-mensile">Versamento mensile</label><div class="entrata"><input id="c-mensile" type="number" inputmode="decimal" min="0" step="10" value="150"><span class="unita">€</span></div></div>
+        <div class="calc-campo"><label for="c-rendimento">Rendimento annuo</label><div class="entrata"><input id="c-rendimento" type="number" inputmode="decimal" min="-20" max="20" step="0.1" value="5"><span class="unita">%</span></div><small>Il valore lo scegli tu: non è una previsione.</small></div>
         <div class="calc-campo"><label for="c-anni">Durata</label><div class="entrata"><input id="c-anni" type="number" inputmode="numeric" min="1" max="50" step="1" value="20"><span class="unita">anni</span></div></div>
       </form>
       <div class="calc-risultati" aria-live="polite">
@@ -375,39 +361,41 @@ const CALCOLATORE = `
           <summary>Tabella anno per anno</summary>
           <div class="scorri-tabella"><table><thead><tr><th scope="col">Anno</th><th scope="col">Capitale versato</th><th scope="col">Interessi</th><th scope="col">Capitale finale</th></tr></thead><tbody id="c-tabella"></tbody></table></div>
         </details>
-        <p class="nota-calc">Questa è una simulazione basata sul rendimento che hai inserito: non è una previsione né un risultato garantito. Il calcolo considera la capitalizzazione mensile e i versamenti a fine mese; non tiene conto di imposte, costi, inflazione e oscillazioni dei mercati.</p>
       </div>
     </div>
   </div>
 </section>`;
 
-/* Esempio visivo dell'interesse composto: 1.000 € versati una volta, rendimento ipotetico del 3% annuo (capitalizzazione annuale) */
+/* Esempio: capitale iniziale 1.800 €, versamento mensile 150 €, rendimento annuo ipotizzato 5% (stessa formula del calcolatore) */
 const INTERESSE = (() => {
-  const capitale = 1000, tasso = 0.03, anni = [10, 20, 30];
+  const capitale = 1800, mensile = 150, tasso = 0.05, durate = [10, 15, 20, 25, 30];
   const fmt = n => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-  const righe = anni.map(n => {
-    const totale = capitale * Math.pow(1 + tasso, n), semplici = capitale * tasso * n;
-    return { n, totale, semplici, extra: totale - capitale - semplici };
+  const im = Math.pow(1 + tasso, 1 / 12) - 1;
+  const righe = durate.map(n => {
+    let c = capitale;
+    for (let m = 0; m < n * 12; m++) c = c * (1 + im) + mensile;
+    const versato = capitale + mensile * n * 12;
+    return { n, versato, interessi: Math.round(c) - versato, finale: Math.round(c) };
   });
-  const max = righe[righe.length - 1].totale;
   return `
 <section class="sezione sezione-crema" id="interesse-composto">
   <div class="contenitore interesse">
     <div class="compare">
       <p class="occhiello">L'interesse composto</p>
       <h2>Gli interessi producono <em>altri interessi.</em></h2>
-      <p class="intro">Esempio: ${fmt(capitale)} € versati una sola volta, con un rendimento ipotetico del 3% annuo. Ogni anno gli interessi maturati si aggiungono al capitale e, dagli anni successivi, producono a loro volta interessi. Più passa il tempo, più questa parte aumenta.</p>
-      <ul class="legenda-interesse">
-        <li><i class="seg-cap"></i>Capitale versato</li>
-        <li><i class="seg-int"></i>Interessi sul capitale</li>
-        <li><i class="seg-extra"></i>Interessi sugli interessi</li>
-      </ul>
+      <p class="intro">Esempio: capitale iniziale di ${fmt(capitale)} € e versamento mensile di ${fmt(mensile)} €, con un rendimento annuo ipotizzato del 5%. Ogni anno gli interessi maturati si aggiungono al capitale e, dagli anni successivi, producono a loro volta interessi. Più passa il tempo, più questa parte aumenta.</p>
     </div>
     <div class="compare d1">
-      <div class="esempio-barre">
-        ${righe.map(x => `<div class="barra-gruppo"><small>${fmt(x.totale)} €</small><div class="barra" role="img" aria-label="Dopo ${x.n} anni: capitale ${fmt(capitale)} euro, interessi sul capitale ${fmt(x.semplici)} euro, interessi sugli interessi ${fmt(x.extra)} euro" style="height:${(x.totale / max * 100).toFixed(1)}%"><i class="seg-extra" style="flex:${x.extra.toFixed(2)}"></i><i class="seg-int" style="flex:${x.semplici}"></i><i class="seg-cap" style="flex:${capitale}"></i></div><b>${x.n} anni</b></div>`).join('\n        ')}
+      <div class="tab-esempio">
+        <table>
+          <caption class="solo-lettori">Capitale iniziale ${fmt(capitale)} €, versamento mensile ${fmt(mensile)} €, rendimento annuo ipotizzato 5%</caption>
+          <thead><tr><th scope="col">Durata</th><th scope="col">Capitale versato</th><th scope="col">Interessi maturati sul capitale</th><th scope="col">Capitale finale</th></tr></thead>
+          <tbody>
+            ${righe.map(x => `<tr><th scope="row">${x.n} anni</th><td>${fmt(x.versato)} €</td><td>${fmt(x.interessi)} €</td><td>${fmt(x.finale)} €</td></tr>`).join('\n            ')}
+          </tbody>
+        </table>
       </div>
-      <p class="nota-calc">Esempio illustrativo con capitalizzazione annuale, senza imposte e costi: non è una previsione né un risultato garantito. I rendimenti reali possono essere diversi e anche negativi.</p>
+      <p class="nota-calc">Esempio illustrativo con rendimento annuo ipotizzato, senza imposte e costi: non è una previsione né un risultato garantito.</p>
     </div>
   </div>
 </section>`;
@@ -492,9 +480,9 @@ ${CALCOLATORE}
 generate.push(pagina({
   percorso: 'chi-sono/', attiva: 'chi-sono',
   titolo: 'Chi sono · Rachele Stermieri, consulente finanziaria',
-  descrizione: 'Rachele Stermieri, consulente finanziaria: prima di parlare di numeri, ascolto le persone. Il mio approccio e la mia formazione.',
+  descrizione: 'Rachele Stermieri, consulente finanziaria: il mio approccio, la mia storia e la mia formazione.',
   corpo: b => `
-${testaPagina(b, { briciole: [['Chi sono']], occhiello: 'Chi sono', titolo: 'Prima di parlare di numeri, <em>ascolto le persone.</em>', intro: 'Sono Rachele Stermieri, consulente finanziaria. Accompagno persone, famiglie e imprenditori nelle scelte che riguardano il loro denaro e i loro progetti.' })}
+${testaPagina(b, { briciole: [['Chi sono']], occhiello: 'Chi sono', titolo: 'Prima di iniziare a fare qualsiasi considerazione, <em>partiamo dalla tua storia, dalle tue esigenze.</em>', intro: 'Sono Rachele Stermieri, consulente finanziaria. Accompagno persone, famiglie e imprenditori nelle scelte che riguardano il loro denaro e i loro progetti.' })}
 
 <section class="sezione chi-blocco">
   <div class="contenitore">
@@ -503,7 +491,7 @@ ${testaPagina(b, { briciole: [['Chi sono']], occhiello: 'Chi sono', titolo: 'Pri
       <h2>Il mio lavoro parte <em>dalle persone, non dai prodotti.</em></h2>
       <p>Ogni persona ha una storia, delle esigenze e dei desideri diversi. Per questo il primo incontro è dedicato ad ascoltarti. Poi costruiamo insieme un percorso coerente con ciò che desideri, e lo seguiamo nel tempo.</p>
       <ul class="formazione">${FORMAZIONE.map(f => `<li>${f}</li>`).join('')}</ul>
-      <div class="azioni" style="margin-top:0"><a href="${b}contatti/" class="btn btn-pieno">Conosciamoci</a><a href="${b}metodo/" class="collegamento">Il mio metodo <span aria-hidden="true">→</span></a></div>
+      <div class="azioni" style="margin-top:0"><a href="${b}contatti/" class="btn btn-pieno">Iniziamo da qui</a><a href="${b}metodo/" class="collegamento">Il mio metodo <span aria-hidden="true">→</span></a></div>
     </div>
   </div>
 </section>`,

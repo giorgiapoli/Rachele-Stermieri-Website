@@ -78,15 +78,15 @@
       </details>
       <details class="domanda">
         <summary>Posso iniziare con 50-100 euro al mese?<span class="segno" aria-hidden="true"></span></summary>
-        <div class="risposta"><p>Sì. Un piano di accumulo si può iniziare anche con importi contenuti, in base agli strumenti disponibili: più dell'importo, conta la costanza nel tempo. Possiamo individuare insieme una rata sostenibile rispetto alle tue entrate e alle tue spese.</p></div>
+        <div class="risposta"><p>Sì. Un piano di accumulo si può iniziare anche con importi contenuti: più dell'importo, conta la costanza nel tempo.</p></div>
       </details>
       <details class="domanda">
         <summary>Posso modificare l'importo dei versamenti?<span class="segno" aria-hidden="true"></span></summary>
-        <div class="risposta"><p>Sì, di norma è possibile aumentare o ridurre la rata in base alle tue esigenze, secondo le condizioni dello strumento scelto. Il piano può cambiare insieme alla tua vita.</p></div>
+        <div class="risposta"><p>Sì, puoi aumentare o ridurre la rata in base alle tue esigenze. Il piano può cambiare insieme alla tua vita.</p></div>
       </details>
       <details class="domanda">
         <summary>Posso sospendere temporaneamente i versamenti?<span class="segno" aria-hidden="true"></span></summary>
-        <div class="risposta"><p>Sì, in genere i versamenti possono essere sospesi per un periodo e ripresi in un secondo momento, secondo le condizioni dello strumento scelto.</p></div>
+        <div class="risposta"><p>Sì, i versamenti possono essere sospesi per un periodo e ripresi in un secondo momento.</p></div>
       </details>
       <details class="domanda">
         <summary>Posso creare un piano di accumulo per mio figlio?<span class="segno" aria-hidden="true"></span></summary>
@@ -105,20 +105,23 @@
     <div class="compare">
       <p class="occhiello">L'interesse composto</p>
       <h2>Gli interessi producono <em>altri interessi.</em></h2>
-      <p class="intro">Esempio: 1.000 € versati una sola volta, con un rendimento ipotetico del 3% annuo. Ogni anno gli interessi maturati si aggiungono al capitale e, dagli anni successivi, producono a loro volta interessi. Più passa il tempo, più questa parte aumenta.</p>
-      <ul class="legenda-interesse">
-        <li><i class="seg-cap"></i>Capitale versato</li>
-        <li><i class="seg-int"></i>Interessi sul capitale</li>
-        <li><i class="seg-extra"></i>Interessi sugli interessi</li>
-      </ul>
+      <p class="intro">Esempio: capitale iniziale di 1.800 € e versamento mensile di 150 €, con un rendimento annuo ipotizzato del 5%. Ogni anno gli interessi maturati si aggiungono al capitale e, dagli anni successivi, producono a loro volta interessi. Più passa il tempo, più questa parte aumenta.</p>
     </div>
     <div class="compare d1">
-      <div class="esempio-barre">
-        <div class="barra-gruppo"><small>1.344 €</small><div class="barra" role="img" aria-label="Dopo 10 anni: capitale 1.000 euro, interessi sul capitale 300 euro, interessi sugli interessi 44 euro" style="height:55.4%"><i class="seg-extra" style="flex:43.92"></i><i class="seg-int" style="flex:300"></i><i class="seg-cap" style="flex:1000"></i></div><b>10 anni</b></div>
-        <div class="barra-gruppo"><small>1.806 €</small><div class="barra" role="img" aria-label="Dopo 20 anni: capitale 1.000 euro, interessi sul capitale 600 euro, interessi sugli interessi 206 euro" style="height:74.4%"><i class="seg-extra" style="flex:206.11"></i><i class="seg-int" style="flex:600"></i><i class="seg-cap" style="flex:1000"></i></div><b>20 anni</b></div>
-        <div class="barra-gruppo"><small>2.427 €</small><div class="barra" role="img" aria-label="Dopo 30 anni: capitale 1.000 euro, interessi sul capitale 900 euro, interessi sugli interessi 527 euro" style="height:100.0%"><i class="seg-extra" style="flex:527.26"></i><i class="seg-int" style="flex:900"></i><i class="seg-cap" style="flex:1000"></i></div><b>30 anni</b></div>
+      <div class="tab-esempio">
+        <table>
+          <caption class="solo-lettori">Capitale iniziale 1.800 €, versamento mensile 150 €, rendimento annuo ipotizzato 5%</caption>
+          <thead><tr><th scope="col">Durata</th><th scope="col">Capitale versato</th><th scope="col">Interessi maturati sul capitale</th><th scope="col">Capitale finale</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">10 anni</th><td>19.800 €</td><td>6.286 €</td><td>26.086 €</td></tr>
+            <tr><th scope="row">15 anni</th><td>28.800 €</td><td>14.666 €</td><td>43.466 €</td></tr>
+            <tr><th scope="row">20 anni</th><td>37.800 €</td><td>27.847 €</td><td>65.647 €</td></tr>
+            <tr><th scope="row">25 anni</th><td>46.800 €</td><td>47.156 €</td><td>93.956 €</td></tr>
+            <tr><th scope="row">30 anni</th><td>55.800 €</td><td>74.286 €</td><td>130.086 €</td></tr>
+          </tbody>
+        </table>
       </div>
-      <p class="nota-calc">Esempio illustrativo con capitalizzazione annuale, senza imposte e costi: non è una previsione né un risultato garantito. I rendimenti reali possono essere diversi e anche negativi.</p>
+      <p class="nota-calc">Esempio illustrativo con rendimento annuo ipotizzato, senza imposte e costi: non è una previsione né un risultato garantito.</p>
     </div>
   </div>
 </section>
@@ -129,9 +132,9 @@
     </div>
     <div class="calcolatore compare">
       <form class="calc-campi" id="calc" novalidate>
-        <div class="calc-campo"><label for="c-iniziale">Capitale iniziale</label><div class="entrata"><input id="c-iniziale" type="number" inputmode="decimal" min="0" step="100" value="1000"><span class="unita">€</span></div></div>
-        <div class="calc-campo"><label for="c-mensile">Versamento mensile</label><div class="entrata"><input id="c-mensile" type="number" inputmode="decimal" min="0" step="10" value="100"><span class="unita">€</span></div></div>
-        <div class="calc-campo"><label for="c-rendimento">Rendimento annuo</label><div class="entrata"><input id="c-rendimento" type="number" inputmode="decimal" min="-20" max="20" step="0.1" value="3"><span class="unita">%</span></div><small>Il valore lo scegli tu: non è una previsione.</small></div>
+        <div class="calc-campo"><label for="c-iniziale">Capitale iniziale</label><div class="entrata"><input id="c-iniziale" type="number" inputmode="decimal" min="0" step="100" value="1800"><span class="unita">€</span></div></div>
+        <div class="calc-campo"><label for="c-mensile">Versamento mensile</label><div class="entrata"><input id="c-mensile" type="number" inputmode="decimal" min="0" step="10" value="150"><span class="unita">€</span></div></div>
+        <div class="calc-campo"><label for="c-rendimento">Rendimento annuo</label><div class="entrata"><input id="c-rendimento" type="number" inputmode="decimal" min="-20" max="20" step="0.1" value="5"><span class="unita">%</span></div><small>Il valore lo scegli tu: non è una previsione.</small></div>
         <div class="calc-campo"><label for="c-anni">Durata</label><div class="entrata"><input id="c-anni" type="number" inputmode="numeric" min="1" max="50" step="1" value="20"><span class="unita">anni</span></div></div>
       </form>
       <div class="calc-risultati" aria-live="polite">
@@ -147,7 +150,6 @@
           <summary>Tabella anno per anno</summary>
           <div class="scorri-tabella"><table><thead><tr><th scope="col">Anno</th><th scope="col">Capitale versato</th><th scope="col">Interessi</th><th scope="col">Capitale finale</th></tr></thead><tbody id="c-tabella"></tbody></table></div>
         </details>
-        <p class="nota-calc">Questa è una simulazione basata sul rendimento che hai inserito: non è una previsione né un risultato garantito. Il calcolo considera la capitalizzazione mensile e i versamenti a fine mese; non tiene conto di imposte, costi, inflazione e oscillazioni dei mercati.</p>
       </div>
     </div>
   </div>

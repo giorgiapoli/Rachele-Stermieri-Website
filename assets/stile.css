@@ -873,3 +873,36 @@ body.home.menu-aperto .apri-menu span{background:transparent}
   .cta-servizio{padding:40px 0}
 }
 .eroe-sotto{max-width:none}
+
+/* =========================================================
+   Esempio del piano di accumulo: tabella compatta
+   ========================================================= */
+.solo-lettori{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.interesse{align-items:start}
+.tab-esempio{background:var(--avorio);border:1px solid var(--sabbia);border-radius:16px;overflow:hidden}
+.tab-esempio table{table-layout:fixed;width:100%;border-collapse:collapse}
+.tab-esempio th,.tab-esempio td{padding:15px 16px;white-space:normal;text-align:right;border-bottom:1px solid var(--linea)}
+.tab-esempio thead th{position:static;background:var(--crema);font-size:12.5px;font-weight:600;line-height:1.35;color:var(--blu);vertical-align:bottom;padding-top:14px;padding-bottom:14px}
+.tab-esempio th:first-child,.tab-esempio td:first-child{width:21%;text-align:left}
+.tab-esempio tbody th{font-family:var(--sans);font-weight:500;font-size:14.5px;color:var(--tenue)}
+.tab-esempio td{font-family:var(--serif);font-size:20px;line-height:1.2;color:var(--blu);font-variant-numeric:tabular-nums}
+.tab-esempio td:last-child{font-weight:600}
+.tab-esempio tbody tr:last-child th,.tab-esempio tbody tr:last-child td{border-bottom:0}
+.interesse .nota-calc{margin-top:16px}
+@media (max-width:640px){
+  .tab-esempio th,.tab-esempio td{padding:12px 7px}
+  .tab-esempio th:first-child,.tab-esempio td:first-child{width:19%;padding-left:12px}
+  .tab-esempio th:last-child,.tab-esempio td:last-child{padding-right:12px}
+  .tab-esempio thead th{font-size:10.5px;letter-spacing:.01em}
+  .tab-esempio tbody th{font-size:12.5px}
+  .tab-esempio td{font-size:15px}
+}
+@media (max-width:360px){
+  .tab-esempio th,.tab-esempio td{padding:11px 3px}
+  .tab-esempio th:first-child,.tab-esempio td:first-child{width:23%;padding-left:9px}
+  .tab-esempio th:last-child,.tab-esempio td:last-child{padding-right:9px}
+  .tab-esempio tbody th{font-size:11.5px;white-space:nowrap}
+  .tab-esempio td{font-size:13.5px;white-space:nowrap}
+  .tab-esempio thead th{font-size:9.5px}
+}
+.risposta p+p{margin-top:10px}

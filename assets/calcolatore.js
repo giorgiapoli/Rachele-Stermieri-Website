@@ -1,5 +1,6 @@
 /* Calcolatore del piano di accumulo
-   - capitalizzazione mensile: tasso mensile = rendimento annuo / 12
+   - capitalizzazione mensile: tasso mensile equivalente al rendimento annuo, (1 + r)^(1/12) - 1,
+     così che in un anno il capitale cresca esattamente del rendimento indicato
    - versamenti a fine mese: ogni mese prima matura l'interesse, poi si aggiunge il versamento */
 (function () {
   'use strict';
@@ -31,7 +32,7 @@
 
   /* Calcolo puro: restituisce i valori a fine di ogni anno */
   function simula(iniziale, mensile, rendimentoAnnuo, anni) {
-    var i = rendimentoAnnuo / 100 / 12;
+    var i = Math.pow(1 + rendimentoAnnuo / 100, 1 / 12) - 1;
     var capitale = iniziale;
     var versato = iniziale;
     var righe = [];

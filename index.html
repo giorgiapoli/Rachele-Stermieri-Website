@@ -110,9 +110,9 @@
     </div>
     <div class="calcolatore compare">
       <form class="calc-campi" id="calc" novalidate>
-        <div class="calc-campo"><label for="c-iniziale">Capitale iniziale</label><div class="entrata"><input id="c-iniziale" type="number" inputmode="decimal" min="0" step="100" value="1000"><span class="unita">€</span></div></div>
-        <div class="calc-campo"><label for="c-mensile">Versamento mensile</label><div class="entrata"><input id="c-mensile" type="number" inputmode="decimal" min="0" step="10" value="100"><span class="unita">€</span></div></div>
-        <div class="calc-campo"><label for="c-rendimento">Rendimento annuo</label><div class="entrata"><input id="c-rendimento" type="number" inputmode="decimal" min="-20" max="20" step="0.1" value="3"><span class="unita">%</span></div><small>Il valore lo scegli tu: non è una previsione.</small></div>
+        <div class="calc-campo"><label for="c-iniziale">Capitale iniziale</label><div class="entrata"><input id="c-iniziale" type="number" inputmode="decimal" min="0" step="100" value="1800"><span class="unita">€</span></div></div>
+        <div class="calc-campo"><label for="c-mensile">Versamento mensile</label><div class="entrata"><input id="c-mensile" type="number" inputmode="decimal" min="0" step="10" value="150"><span class="unita">€</span></div></div>
+        <div class="calc-campo"><label for="c-rendimento">Rendimento annuo</label><div class="entrata"><input id="c-rendimento" type="number" inputmode="decimal" min="-20" max="20" step="0.1" value="5"><span class="unita">%</span></div><small>Il valore lo scegli tu: non è una previsione.</small></div>
         <div class="calc-campo"><label for="c-anni">Durata</label><div class="entrata"><input id="c-anni" type="number" inputmode="numeric" min="1" max="50" step="1" value="20"><span class="unita">anni</span></div></div>
       </form>
       <div class="calc-risultati" aria-live="polite">
@@ -128,7 +128,6 @@
           <summary>Tabella anno per anno</summary>
           <div class="scorri-tabella"><table><thead><tr><th scope="col">Anno</th><th scope="col">Capitale versato</th><th scope="col">Interessi</th><th scope="col">Capitale finale</th></tr></thead><tbody id="c-tabella"></tbody></table></div>
         </details>
-        <p class="nota-calc">Questa è una simulazione basata sul rendimento che hai inserito: non è una previsione né un risultato garantito. Il calcolo considera la capitalizzazione mensile e i versamenti a fine mese; non tiene conto di imposte, costi, inflazione e oscillazioni dei mercati.</p>
       </div>
     </div>
   </div>
